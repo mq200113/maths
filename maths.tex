@@ -1168,6 +1168,64 @@ $f_{|G}\in\mathcal{L}(G,F)$
 et $f_{|H}\in\mathcal{L}(H,F)$,c'est-à-dire $\phi(f)=(g,h)$.Par conséquant,$\phi$ est surjective.
 
 \end{proof}
+\chapter{Polynômes}
+\section{Théorème d'aporoximation de Weierstrass à l'aide des polynômes de Bernstein}
+谢尔盖·纳塔诺维奇·伯恩施坦(1880年3月5日—1968年10月26日）是一位俄国及苏联的数学家.1912年, Bernstein多项式曾经被用来证明威尔斯特拉斯逼近定理 (Weierstrass approximation theorem).
+
+\begin{thm}[Théorème d'approximation de Weierstrass]
+Toute fonction continue sur [0,1] est limite uniforme de fonctions polynomiales. 
+\end{thm}
+\begin{proof}
+下面我们借助于伯恩斯坦多项式分几步来证明它：
+
+Dans toute la discussion, on identifiera un polynôme et sa fonction polynomiale associée.
+
+Soit  $f: [0.1] \rightarrow \mathbb{R}$ une application continue. Pour n $\in \mathbb N ^{*}$ , on définie le $n^{\text{ième}}$  polynôme de Bernstein associé à f par:
+
+​$$\boxed{B_{n}(f)(x) = \sum_{k=0}^{n}\binom{n}{k}f(\frac{k}{n})x^k(1-x)^{n-k}}$$ 
+
+Soit $\epsilon > 0$ .D'aprè le théoreme de Heine, il existe $\eta > 0$ tel que pour $(x,y) \in [0,1]^2$ . si $\left | x-y \right | \le\eta$  alors       $\left | f(x)-f(y) \right | \le\frac{\epsilon}{2}.$  
+
+On note $M$  la borne supérieure de $\{\left |f(x)\right| / x\in [0,1]\}$ .On se fixe $x\in [0,1]$ .
+
+
+1.Montrer que 
+
+​ $$f(x)-B_{n}(f)(x) = \sum_{k=0}^{n}\binom{n}{k}(f(x)-f(\frac{k}{n}))x^k(1-x)^{n-k}.$$
+
+
+
+2.(a)Montrer que
+
+$$\sum_{0\le k\le n, \left | x-\frac{k}{n} \right | \color{blue}{\le}\eta}\binom{n}{k}\left|(f(x)-f(\frac{k}{n}))\right|x^k(1-x)^{n-k}\le\frac{\epsilon}{2}.$$ 
+
+​2.(b)Montrer que 
+
+$$\sum_{0\le k\le n, \left | x-\frac{k}{n} \right | \color{red}{>}\eta}\binom{n}{k}\left|(f(x)-f(\frac{k}{n}))\right|x^k(1-x)^{n-k}\le\frac{2M}{\eta^2}\sum_{k=0}^{n}\binom{n}{k}(x-\frac{k}{n})^2x^k(1-x)^{n-k}$$
+
+
+
+3.Calculer $B_{n}(t\mapsto t)(x)$ et $B_{n}(t\mapsto t^2)(x)$.On pourra introduire $S:  y\mapsto (y+1-x)^n$ .
+
+(difficile,提示：利用好新引入的变量y与x的区别，试试展开S以及对分别对展开前后的S关于y求导，比照与要计算式子的区别并乘上缺的x幂次)
+
+4.Montrer que 
+
+$$\sum_{0\le k\le n, \left | x-\frac{k}{n} \right | \color{red}{>}\eta}\binom{n}{k}\left|(f(x)-f(\frac{k}{n}))\right|x^k(1-x)^{n-k}\le\frac{M}{2\eta^2 n}.$$
+
+（difficle+,要利用2(b)和3中的结论，试着展开2(b)不等式右边的$(x-k/n)^2$项，并试着代入3中求得的两个式子）
+
+5.Prouver que pour $\epsilon>0$ ,il existe $N\in \mathbb N$ tel que pour $x\in [0,1],\left|f(x)-B_{n}(f)(x)\right|\le \epsilon.$
+
+(difficile+,注意这里是对整个的$x\in[0,1]$ ,利用2(a)和4中的结论)
+
+On dit que f est approchée uniformément sur [0,1] par les polynomes $B_{n}(f)$.
+\end{proof}
+
+
+
+
+
 \chapter{Integration}
 We now turn to integration, which we develop as the ‘area under the curve’. We establish the existence and properties of the Riemann integral; this is an integral whose development is quite straightforward, and which is good for many of the needs of analysis. It has some shortcomings: it can only be applied to a restricted class of functions, and it is not easy to obtain good results about limits of integrals. For this, a more sophisticated(复杂的) integral, the Lebesgue integral, is needed.
 
