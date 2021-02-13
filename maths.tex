@@ -708,8 +708,34 @@ montre aue la propriété est vraie au rang $n+1$ et achève la récurrence.
 
 
 
+\chapter{Développement limité }
+\section{Inégalité de Kolmogorov}
+\begin{lem}
+ Soit q $\in \mathbb N^*.$ Pour tout $l\in [|0,q|],$
+$$\sum_{p=0}^q(-1)^p\binom{q}{p}p^l=\left\{
+\begin{aligned}
+0&\quad\text{ si }l\in [|0,q-1|];\\
+(-1)^qq!&\quad\text{ si }l=q.\\
+\end{aligned}\right.$$
+\end{lem}
 
+Indication: On pourra considérer le développement limité à l'ordre $q$ de $x\longmapsto (e^x-1)^q$ au voisinage de 0.
+\begin{proof}
+ D'après la formule du binôme, on a: 
+$$(e^x-1)^q=\sum^q_{p=0}\binom{q}{p}(-1)^{q-p}e^{px}.$$
+Par suite, en effectuant dans chaque terme le développement limité de $x\longmapsto e^{px}$ à l'ordre $q$ au voisinage de 0, on obtient:
+$$\begin{aligned}
+(e^x-1)^q&\underset{x\to 0}=\sum^q_{p=0}\binom{q}{p}(-1)^{q-p}\left(\sum^q_{k=0}\frac{(px)^k}{k!}+o(x^q)\right)\\
+&\underset{x\to 0}=\sum^q_{k=0}\frac{1}{k!}\left(\sum^q_{p=0}\binom{q}{p}(-1)^{q-p}p^k\right)x^k+o(x^q).
+\end{aligned}$$
+Or $(e^x-1)^q\underset{x\to 0}\sim x^q$. Par  unicité du développement limité à l'ordre $q$ au voisinage de 0, on a: $$\sum_{p=0}^q(-1)^p\binom{q}{p}p^l=\left\{
+\begin{aligned}
+0&\quad\text{ si }l\in [|0,q-1|];\\
+(-1)^qq!&\quad\text{ si }l=q.\\
+\end{aligned}\right.$$ 
+\end{proof}
 
+这个证明表现了DL在证明一些特殊的等式中的作用,是DL的一个很少见的应用,(DL本来是用作近似的，却可以拿来作为证明精确相等关系的桥梁，这点值得大家去体会).
 
 
 \chapter{Probabilité}
@@ -1170,8 +1196,6 @@ et $f_{|H}\in\mathcal{L}(H,F)$,c'est-à-dire $\phi(f)=(g,h)$.Par conséquant,$\p
 \end{proof}
 \chapter{Polynômes}
 \section{Théorème d'aporoximation de Weierstrass à l'aide des polynômes de Bernstein}
-谢尔盖·纳塔诺维奇·伯恩施坦(1880年3月5日—1968年10月26日）是一位俄国及苏联的数学家.1912年, Bernstein多项式曾经被用来证明威尔斯特拉斯逼近定理 (Weierstrass approximation theorem).
-
 \begin{thm}[Théorème d'approximation de Weierstrass]
 Toute fonction continue sur [0,1] est limite uniforme de fonctions polynomiales. 
 \end{thm}

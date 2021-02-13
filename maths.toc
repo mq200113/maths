@@ -1,0 +1,56 @@
+\contentsline {chapter}{\numberline {1}Vocabulaire de théorie des ensembles}{1}{chapter.1}%
+\contentsline {chapter}{\numberline {2}Logarithme}{7}{chapter.2}%
+\contentsline {paragraph}{Propriété fondamentale}{7}{section*.6}%
+\contentsline {paragraph}{Exposant rationnel}{7}{section*.7}%
+\contentsline {chapter}{\numberline {3}Vector calculus}{9}{chapter.3}%
+\contentsline {section}{\numberline {3.1}The vector product(Axial vector)}{9}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Rules of calculation}{9}{subsection.3.1.1}%
+\contentsline {paragraph}{No associativity}{9}{section*.8}%
+\contentsline {chapter}{\numberline {4}The natural numbers}{11}{chapter.4}%
+\contentsline {section}{\numberline {4.1}The Peano axioms}{11}{section.4.1}%
+\contentsline {chapter}{\numberline {5}Ensembles des nombres réels}{13}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Densité de $\mathbb {Q}$ et de $\mathbb {R\setminus Q}$}{13}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Borne supérieure et borne inférieure}{13}{section.5.2}%
+\contentsline {chapter}{\numberline {6}Généralités sur les fonctions d'une variable réelle}{15}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Fonctions lipschitziennes}{15}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Fonctions monotones}{16}{section.6.2}%
+\contentsline {chapter}{\numberline {7}Étude locale d'une fonction}{17}{chapter.7}%
+\contentsline {chapter}{\numberline {8}Relation de comparaisons}{19}{chapter.8}%
+\contentsline {chapter}{\numberline {9}Suites réelles et complexes}{21}{chapter.9}%
+\contentsline {section}{\numberline {9.1}Suite de nombres réels}{21}{section.9.1}%
+\contentsline {subsection}{\numberline {9.1.1}Définition}{21}{subsection.9.1.1}%
+\contentsline {paragraph}{rang et suite stationnaire}{22}{section*.9}%
+\contentsline {paragraph}{Théorème(basic) de la relation équivalante}{22}{section*.10}%
+\contentsline {subsection}{\numberline {9.1.2}Séries}{22}{subsection.9.1.2}%
+\contentsline {paragraph}{Théorème de Césaro}{24}{section*.11}%
+\contentsline {paragraph}{Théorème de Bolzano-Weierstrass}{26}{section*.12}%
+\contentsline {subparagraph}{Cas1}{26}{section*.13}%
+\contentsline {subparagraph}{Cas2}{27}{section*.14}%
+\contentsline {chapter}{\numberline {10}Dérivation}{29}{chapter.10}%
+\contentsline {chapter}{\numberline {11}Développement limité }{35}{chapter.11}%
+\contentsline {section}{\numberline {11.1}Inégalité de Kolmogorov}{35}{section.11.1}%
+\contentsline {chapter}{\numberline {12}Probabilité}{37}{chapter.12}%
+\contentsline {section}{\numberline {12.1}Définition et propriétés d'une probabilité }{37}{section.12.1}%
+\contentsline {subsection}{\numberline {12.1.1}Définition}{37}{subsection.12.1.1}%
+\contentsline {subsection}{\numberline {12.1.2}Mesure de Dirac en $\omega $}{38}{subsection.12.1.2}%
+\contentsline {section}{\numberline {12.2}Set}{38}{section.12.2}%
+\contentsline {subsection}{\numberline {12.2.1}Atoms}{38}{subsection.12.2.1}%
+\contentsline {chapter}{\numberline {13}Relations and Operations}{41}{chapter.13}%
+\contentsline {chapter}{\numberline {14}Groups and Homomorphisms}{43}{chapter.14}%
+\contentsline {section}{\numberline {14.1}Cosets}{43}{section.14.1}%
+\contentsline {chapter}{\numberline {15}Généralité sur espace vectoriel}{45}{chapter.15}%
+\contentsline {chapter}{\numberline {16}Opération sur les espaces vectoriels}{49}{chapter.16}%
+\contentsline {section}{\numberline {16.1}Intersection et sous-espace engendré par une partie}{49}{section.16.1}%
+\contentsline {section}{\numberline {16.2}Somme de sous-espaces vectoriels}{51}{section.16.2}%
+\contentsline {section}{\numberline {16.3}Sommes directes et sous-espaces sectoriels supplémentaires}{52}{section.16.3}%
+\contentsline {paragraph}{Proposition: 直和的等价(具体形式)}{52}{section*.17}%
+\contentsline {paragraph}{Definition: Supplémentaire}{52}{section*.18}%
+\contentsline {paragraph}{Théorème: Existence du supplémentaire}{53}{section*.19}%
+\contentsline {section}{\numberline {16.4}Produit cartésien de deux espaces vectoriel}{53}{section.16.4}%
+\contentsline {chapter}{\numberline {17}Applications linéaires}{55}{chapter.17}%
+\contentsline {paragraph}{Définition: forme linéaire}{55}{section*.20}%
+\contentsline {subsection}{\numberline {17.0.1}Restriction et recollement}{55}{subsection.17.0.1}%
+\contentsline {chapter}{\numberline {18}Polynômes}{59}{chapter.18}%
+\contentsline {section}{\numberline {18.1}Théorème d'aporoximation de Weierstrass à l'aide des polynômes de Bernstein}{59}{section.18.1}%
+\contentsline {chapter}{\numberline {19}Integration}{61}{chapter.19}%
+\contentsline {section}{\numberline {19.1}Upper and lower Riemann integrals}{64}{section.19.1}%
