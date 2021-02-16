@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (MiKTeX 20.7) (preloaded format=xelatex 2021.1.28)  13 FEB 2021 14:23
+This is XeTeX, Version 3.14159265-2.6-0.999992 (MiKTeX 20.7) (preloaded format=xelatex 2021.1.28)  16 FEB 2021 12:55
 entering extended mode
 **./maths.tex
 (maths.tex
@@ -543,96 +543,97 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 \c@lem=\count311
 \c@axm=\count312
 \c@lmm=\count313
-\c@cor=\count314
-\c@rem=\count315
+\c@exm=\count314
+\c@cor=\count315
+\c@rem=\count316
  (maths.aux)
 \openout1 = `maths.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
 
 Package fontspec Info: Adjusting the maths setup (use [no-math] to avoid
 (fontspec)             this).
 
 \symlegacymaths=\mathgroup7
 LaTeX Font Info:    Overwriting symbol font `legacymaths' in version `bold'
-(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 26.
-LaTeX Font Info:    Redeclaring math accent \acute on input line 26.
-LaTeX Font Info:    Redeclaring math accent \grave on input line 26.
-LaTeX Font Info:    Redeclaring math accent \ddot on input line 26.
-LaTeX Font Info:    Redeclaring math accent \tilde on input line 26.
-LaTeX Font Info:    Redeclaring math accent \bar on input line 26.
-LaTeX Font Info:    Redeclaring math accent \breve on input line 26.
-LaTeX Font Info:    Redeclaring math accent \check on input line 26.
-LaTeX Font Info:    Redeclaring math accent \hat on input line 26.
-LaTeX Font Info:    Redeclaring math accent \dot on input line 26.
-LaTeX Font Info:    Redeclaring math accent \mathring on input line 26.
-LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 26.
-LaTeX Font Info:    Redeclaring math symbol \Delta on input line 26.
-LaTeX Font Info:    Redeclaring math symbol \Theta on input line 26.
-LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 26.
-LaTeX Font Info:    Redeclaring math symbol \Xi on input line 26.
-LaTeX Font Info:    Redeclaring math symbol \Pi on input line 26.
-LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 26.
-LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 26.
-LaTeX Font Info:    Redeclaring math symbol \Phi on input line 26.
-LaTeX Font Info:    Redeclaring math symbol \Psi on input line 26.
-LaTeX Font Info:    Redeclaring math symbol \Omega on input line 26.
-LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 26.
-LaTeX Font Info:    Redeclaring symbol font `operators' on input line 26.
+(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 30.
+LaTeX Font Info:    Redeclaring math accent \acute on input line 30.
+LaTeX Font Info:    Redeclaring math accent \grave on input line 30.
+LaTeX Font Info:    Redeclaring math accent \ddot on input line 30.
+LaTeX Font Info:    Redeclaring math accent \tilde on input line 30.
+LaTeX Font Info:    Redeclaring math accent \bar on input line 30.
+LaTeX Font Info:    Redeclaring math accent \breve on input line 30.
+LaTeX Font Info:    Redeclaring math accent \check on input line 30.
+LaTeX Font Info:    Redeclaring math accent \hat on input line 30.
+LaTeX Font Info:    Redeclaring math accent \dot on input line 30.
+LaTeX Font Info:    Redeclaring math accent \mathring on input line 30.
+LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 30.
+LaTeX Font Info:    Redeclaring math symbol \Delta on input line 30.
+LaTeX Font Info:    Redeclaring math symbol \Theta on input line 30.
+LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 30.
+LaTeX Font Info:    Redeclaring math symbol \Xi on input line 30.
+LaTeX Font Info:    Redeclaring math symbol \Pi on input line 30.
+LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 30.
+LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 30.
+LaTeX Font Info:    Redeclaring math symbol \Phi on input line 30.
+LaTeX Font Info:    Redeclaring math symbol \Psi on input line 30.
+LaTeX Font Info:    Redeclaring math symbol \Omega on input line 30.
+LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 30.
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 30.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `normal' on input line 26.
+(Font)              `operators' in the math version `normal' on input line 30.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> TU/lmr/m/n on input line 26.
+(Font)                  OT1/cmr/m/n --> TU/lmr/m/n on input line 30.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `bold' on input line 26.
+(Font)              `operators' in the math version `bold' on input line 30.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> TU/lmr/m/n on input line 26.
+(Font)                  OT1/cmr/bx/n --> TU/lmr/m/n on input line 30.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  TU/lmr/m/n --> TU/lmr/m/n on input line 26.
+(Font)                  TU/lmr/m/n --> TU/lmr/m/n on input line 30.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> TU/lmr/m/it on input line 26.
+(Font)                  OT1/cmr/m/it --> TU/lmr/m/it on input line 30.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> TU/lmr/b/n on input line 26.
+(Font)                  OT1/cmr/bx/n --> TU/lmr/b/n on input line 30.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> TU/lmss/m/n on input line 26.
+(Font)                  OT1/cmss/m/n --> TU/lmss/m/n on input line 30.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 26.
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 30.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  TU/lmr/m/n --> TU/lmr/b/n on input line 26.
+(Font)                  TU/lmr/m/n --> TU/lmr/b/n on input line 30.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmr/bx/it --> TU/lmr/b/it on input line 26.
+(Font)                  OT1/cmr/bx/it --> TU/lmr/b/it on input line 30.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> TU/lmss/b/n on input line 26.
+(Font)                  OT1/cmss/bx/n --> TU/lmss/b/n on input line 30.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> TU/lmtt/b/n on input line 26.
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/b/n on input line 30.
  ABD: EverySelectfont initializing macros
-LaTeX Info: Redefining \selectfont on input line 26.
+LaTeX Info: Redefining \selectfont on input line 30.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
 \AtBeginShipoutBox=\box54
-Package hyperref Info: Link coloring OFF on input line 26.
+Package hyperref Info: Link coloring OFF on input line 30.
 
 (D:\MiKTeX\tex/latex/hyperref\nameref.sty
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
@@ -644,28 +645,28 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 g.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count316
+\c@section@level=\count317
 )
-LaTeX Info: Redefining \ref on input line 26.
-LaTeX Info: Redefining \pageref on input line 26.
-LaTeX Info: Redefining \nameref on input line 26.
+LaTeX Info: Redefining \ref on input line 30.
+LaTeX Info: Redefining \pageref on input line 30.
+LaTeX Info: Redefining \nameref on input line 30.
  (maths.out) (maths.out)
 \@outlinefile=\write3
 \openout3 = `maths.out'.
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 28.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 32.
 
  (D:\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 28.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 32.
 
 
 (D:\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+stmry on input line 2
-8.
+LaTeX Font Info:    Trying to load font information for U+stmry on input line 3
+2.
 
 (C:\Users\10109\AppData\Roaming\MiKTeX\tex/latex/stmaryrd\ustmry.fd) [1
 
@@ -676,9 +677,9 @@ LaTeX Font Info:    Trying to load font information for U+stmry on input line 2
 ] (maths.toc [3]
 LaTeX Font Info:    Font shape `TU/SimSun(0)/m/sl' in size <12> not available
 (Font)              Font shape `TU/SimSun(0)/m/it' tried instead on input line 
-53.
+54.
  [4]
-Overfull \hbox (13.25188pt too wide) in paragraph at lines 54--54
+Overfull \hbox (13.25188pt too wide) in paragraph at lines 61--61
  [][] [][]\TU/lmr/m/n/12 Théorème d’aporoximation de Weierstrass à l’aide des p
 olynômes 
  []
@@ -707,7 +708,7 @@ File: image//Vocabulaire de theorie des ensembles//3.png Graphic file (type bmp
 )
 <image//Vocabulaire de theorie des ensembles//3.png>
 
-Overfull \hbox (77.99881pt too wide) in paragraph at lines 83--83
+Overfull \hbox (77.99881pt too wide) in paragraph at lines 87--87
  [][] 
  []
 
@@ -715,48 +716,85 @@ File: image//Vocabulaire de theorie des ensembles//4.png Graphic file (type bmp
 )
 <image//Vocabulaire de theorie des ensembles//4.png>
 
-Overfull \hbox (77.99881pt too wide) in paragraph at lines 96--96
+Overfull \hbox (77.99881pt too wide) in paragraph at lines 100--100
  [][] 
  []
 
-[3] [4] [5] [6]
-Chapter 2.
-[7
+[3] [4] [5]
 
-] [8
+Package hyperref Warning: Difference (2) between bookmark levels is greater 
+(hyperref)                than one, level fixed on input line 148.
+
+[6] [7]
+File: image//Vocabulaire de theorie des ensembles//5.png Graphic file (type bmp
+)
+<image//Vocabulaire de theorie des ensembles//5.png>
+ [8] [9] [10] [11]
+Overfull \hbox (15.19223pt too wide) in paragraph at lines 271--273
+[]\TU/lmr/m/n/12 - This ’composition law’ is associative: if $\OML/cmm/m/it/12 
+f \OMS/cmsy/m/n/12 2 [][]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 A; B\OT1/cmr/m/n/12 
+)\OML/cmm/m/it/12 ; g \OMS/cmsy/m/n/12 2 [][]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 
+B; C\OT1/cmr/m/n/12 )$
+ []
+
+[12] [13] [14]
+File: image//Vocabulaire de theorie des ensembles//6.png Graphic file (type bmp
+)
+<image//Vocabulaire de theorie des ensembles//6.png>
+File: image//Vocabulaire de theorie des ensembles//7.png Graphic file (type bmp
+)
+<image//Vocabulaire de theorie des ensembles//7.png>
+File: image//Vocabulaire de theorie des ensembles//8.png Graphic file (type bmp
+)
+<image//Vocabulaire de theorie des ensembles//8.png>
+ [15]
+File: image//Vocabulaire de theorie des ensembles//9.png Graphic file (type bmp
+)
+<image//Vocabulaire de theorie des ensembles//9.png>
+File: image//Vocabulaire de theorie des ensembles//10.png Graphic file (type bm
+p)
+<image//Vocabulaire de theorie des ensembles//10.png>
+File: image//Vocabulaire de theorie des ensembles//11.png Graphic file (type bm
+p)
+<image//Vocabulaire de theorie des ensembles//11.png>
+ [16] [17] [18
+
+]
+Chapter 2.
+[19] [20
 
 ]
 Chapter 3.
-[9] [10
+[21] [22
 
 ]
 Chapter 4.
-[11] [12
+[23] [24
 
 ]
 Chapter 5.
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 185.
+(hyperref)                removing `math shift' on input line 436.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 185.
+(hyperref)                removing `math shift' on input line 436.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 185.
+(hyperref)                removing `math shift' on input line 436.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\setminus' on input line 185.
+(hyperref)                removing `\setminus' on input line 436.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 185.
+(hyperref)                removing `math shift' on input line 436.
 
 
-Overfull \hbox (5.73808pt too wide) detected at line 211
+Overfull \hbox (5.73808pt too wide) detected at line 462
 [] \OML/cmm/m/it/12 A \OT1/cmr/m/n/12 = []\OMS/cmsy/m/n/12 f\OML/cmm/m/it/12 M 
 \OMS/cmsy/m/n/12 2 \OML/cmm/m/it/12 E; M majore A\OMS/cmsy/m/n/12 g \OT1/cmr/m/
 n/12 = []\OMS/cmsy/m/n/12 f\OML/cmm/m/it/12 M \OMS/cmsy/m/n/12 2 \OML/cmm/m/it/
@@ -764,40 +802,40 @@ n/12 = []\OMS/cmsy/m/n/12 f\OML/cmm/m/it/12 M \OMS/cmsy/m/n/12 2 \OML/cmm/m/it/
 ; a \OMS/cmsy/m/n/12 ^^T \OML/cmm/m/it/12 M\OMS/cmsy/m/n/12 g
  []
 
-[13] [14]
+[25] [26]
 Chapter 6.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [15
+ [27
 
 ]
 Overfull \hbox (65.4656pt too wide) has occurred while \output is active
-\TU/lmr/m/n/12 16 \TU/lmr/m/sl/12 CHAPTER 6.  GÉNÉRALITÉS SUR LES FONCTIONS D’U
+\TU/lmr/m/n/12 28 \TU/lmr/m/sl/12 CHAPTER 6.  GÉNÉRALITÉS SUR LES FONCTIONS D’U
 NE VARIABLE RÉELLE
  []
 
-[16]
+[28]
 Chapter 7.
 
-Overfull \hbox (72.62933pt too wide) in paragraph at lines 298--301
+Overfull \hbox (72.62933pt too wide) in paragraph at lines 549--552
 \TU/lmr/m/n/12 par $\OML/cmm/m/it/12 B\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 a; ^^K\
 OT1/cmr/m/n/12 ) = []$\TU/lmr/m/n/12 (respectivement $\OML/cmm/m/it/12 B[]\OT1/
 cmr/m/n/12 (\OML/cmm/m/it/12 a; ^^K\OT1/cmr/m/n/12 ) = []$\TU/lmr/m/n/12 ). 
  []
 
-[17
+[29
 
-] [18]
+] [30]
 Chapter 8.
-[19
+[31
 
-] [20
+] [32
 
 ]
 Chapter 9.
-[21]
-Overfull \hbox (61.92348pt too wide) detected at line 400
+[33]
+Overfull \hbox (61.92348pt too wide) detected at line 651
 \OML/cmm/m/it/12 u[] [] v[] \OMS/cmsy/m/n/12 ([]) [] [] \OT1/cmr/m/n/12 1 \OMS/
 cmsy/m/n/12 ([]) [] [] \OT1/cmr/m/n/12 1 + \OML/cmm/m/it/12 o\OT1/cmr/m/n/12 (1
 ) \OMS/cmsy/m/n/12 ([]) \OML/cmm/m/it/12 u[] [] v[] \OT1/cmr/m/n/12 + \OML/cmm/
@@ -806,19 +844,19 @@ m/it/12 v[]o\OT1/cmr/m/n/12 (1) \OMS/cmsy/m/n/12 ([]) \OML/cmm/m/it/12 u[] [] v
 1/cmr/m/n/12 )\OML/cmm/m/it/12 :
  []
 
-[22]
-Overfull \hbox (0.88548pt too wide) in paragraph at lines 437--440
+[34]
+Overfull \hbox (0.88548pt too wide) in paragraph at lines 688--691
 \TU/lmr/m/n/12 De plus, pour k dans $[]$, la fonction $\OML/cmm/m/it/12 t \OMS/
 cmsy/m/n/12 7[][]! []$ \TU/lmr/m/n/12 est décroissante sur [k,k+1],donc: 
  []
 
-[23] [24] [25]
-LaTeX Font Info:    Trying to load font information for U+euf on input line 530
+[35] [36] [37]
+LaTeX Font Info:    Trying to load font information for U+euf on input line 781
 .
  (D:\MiKTeX\tex/latex/amsfonts\ueuf.fd
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
 )
-Overfull \hbox (30.68175pt too wide) in paragraph at lines 553--555
+Overfull \hbox (30.68175pt too wide) in paragraph at lines 804--806
 []\TU/SimSun(0)/m/n/12 上 面 的 最 后 一 条 关 系 是 利 用 了 以 下 原 理：| $\OML/cmm/m/it/12 '\
 OT1/cmr/m/n/12 (\OML/cmm/m/it/12 k\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 ; '\OT1/cmr
 /m/n/12 (\OML/cmm/m/it/12 k \OT1/cmr/m/n/12 + 1) \OMS/cmsy/m/n/12 2 []nf\OML/cm
@@ -826,146 +864,154 @@ m/m/it/12 '\OT1/cmr/m/n/12 (0)\OML/cmm/m/it/12 ; :::; '\OT1/cmr/m/n/12 (\OML/cm
 m/m/it/12 k \OMS/cmsy/m/n/12 ^^@
  []
 
-[26] [27] [28
+[38] [39] [40
 
 ]
 Chapter 10.
+[41] [42] [43] [44] [45] [46] [47] [48]
+Chapter 11.
 
-Overfull \hbox (13.03409pt too wide) in paragraph at lines 595--611
+Overfull \hbox (13.03409pt too wide) in paragraph at lines 1025--1041
 [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 595--611
+Underfull \hbox (badness 10000) in paragraph at lines 1025--1041
 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [29]
+ [49
+
+]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [30]
-[31]
-Overfull \hbox (23.45627pt too wide) detected at line 682
+ [50]
+[51]
+Overfull \hbox (23.45627pt too wide) detected at line 1112
 []
  []
 
 
-Overfull \hbox (26.88576pt too wide) detected at line 697
+Overfull \hbox (26.88576pt too wide) detected at line 1127
 [][]
  []
 
 
 Underfull \vbox (badness 2277) has occurred while \output is active []
 
- [32]
-[33] [34
+ [52]
+[53] [54
 
 ]
-Chapter 11.
-[35] [36]
 Chapter 12.
+[55] [56]
+Chapter 13.
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 759.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\omega' on input line 759.
+(hyperref)                removing `math shift' on input line 1189.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 759.
+(hyperref)                removing `\omega' on input line 1189.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1189.
 
 
 Underfull \vbox (badness 6893) has occurred while \output is active []
 
- [37
+ [57
 
 ]
-Overfull \hbox (9.90466pt too wide) detected at line 786
+Overfull \hbox (9.90466pt too wide) detected at line 1216
 [][]
  []
 
-[38]
+[58]
 File: image//Probabilite//1.png Graphic file (type bmp)
 <image//Probabilite//1.png>
 
-Overfull \hbox (194.55794pt too wide) in paragraph at lines 805--806
+Overfull \hbox (194.55794pt too wide) in paragraph at lines 1235--1236
 [][] 
  []
 
-[39] [40
-
-]
-Chapter 13.
-[41] [42
+[59] [60
 
 ]
 Chapter 14.
-[43] [44
+[61] [62
 
 ]
 Chapter 15.
-[45] [46] [47] [48
+[63] [64
 
 ]
 Chapter 16.
-
-LaTeX Font Warning: Font shape `TU/SimSun(0)/b/it' undefined
-(Font)              using `TU/SimSun(0)/b/n' instead on input line 967.
-
-[49]
-
-Package amsmath Warning: Foreign command \atop;
-(amsmath)                \frac or \genfrac should be used instead
-(amsmath)                 on input line 1002.
-
-File: image//Operation sur les espaces vectoriels//1.png Graphic file (type bmp
-)
-<image//Operation sur les espaces vectoriels//1.png>
-[50] [51] [52] [53] [54
+[65] [66] [67] [68
 
 ]
 Chapter 17.
 
-Overfull \hbox (9.49582pt too wide) in paragraph at lines 1114--1116
-[][]\TU/lmr/bx/n/12 Proposition 17.1. []Equivalence pour voir si une applicatio
+LaTeX Font Warning: Font shape `TU/SimSun(0)/b/it' undefined
+(Font)              using `TU/SimSun(0)/b/n' instead on input line 1397.
+
+[69]
+
+Package amsmath Warning: Foreign command \atop;
+(amsmath)                \frac or \genfrac should be used instead
+(amsmath)                 on input line 1432.
+
+File: image//Operation sur les espaces vectoriels//1.png Graphic file (type bmp
+)
+<image//Operation sur les espaces vectoriels//1.png>
+[70] [71] [72] [73] [74
+
+]
+Chapter 18.
+
+Overfull \hbox (9.49582pt too wide) in paragraph at lines 1544--1546
+[][]\TU/lmr/bx/n/12 Proposition 18.1. []Equivalence pour voir si une applicatio
 n est linéaire
  []
 
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 1131.
+(hyperref)                than one, level fixed on input line 1561.
 
-[55]
+[75]
 Underfull \vbox (badness 3482) has occurred while \output is active []
 
- [56]
-Overfull \hbox (4.2387pt too wide) in paragraph at lines 1164--1166
+ [76]
+Overfull \hbox (4.2387pt too wide) in paragraph at lines 1594--1596
 \TU/lmr/m/n/12 Par conséquant,pour tout $\OML/cmm/m/it/12 x \OMS/cmsy/m/n/12 2 
 \OML/cmm/m/it/12 E; f\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x\OT1/cmr/m/n/12 ) = 0$\
 TU/lmr/m/n/12 ,c’est-à-dire $\OML/cmm/m/it/12 f \OT1/cmr/m/n/12 = 0$\TU/lmr/m/n
 /12 (application
  []
 
-[57] [58]
-Chapter 18.
+[77] [78]
+Chapter 19.
+[79
 
-Overfull \hbox (15.52682pt too wide) in paragraph at lines 1198--1198
+] [80] [81] [82]
+Chapter 20.
+
+Overfull \hbox (15.52682pt too wide) in paragraph at lines 1690--1690
 []\TU/lmr/bx/n/17.28 Théorème d’aporoximation de Weierstrass
  []
 
 Missing character: There is no ​ in font [lmroman12-regular]:mapping=tex-text;!
-[59
+[83
 
 ]
 Missing character: There is no ​ in font [lmroman12-regular]:mapping=tex-text;!
 Missing character: There is no ​ in font [lmroman12-regular]:mapping=tex-text;!
 
-Overfull \hbox (28.5923pt too wide) detected at line 1228
+Overfull \hbox (28.5923pt too wide) detected at line 1720
 [][] [] [] \OML/cmm/m/it/12 x[]\OT1/cmr/m/n/12 (1 \OMS/cmsy/m/n/12 ^^@ \OML/cmm
 /m/it/12 x\OT1/cmr/m/n/12 )[] \OMS/cmsy/m/n/12 ^^T [] [] []\OT1/cmr/m/n/12 (\OM
 L/cmm/m/it/12 x \OMS/cmsy/m/n/12 ^^@ []\OT1/cmr/m/n/12 )[]\OML/cmm/m/it/12 x[]\
@@ -973,7 +1019,7 @@ OT1/cmr/m/n/12 (1 \OMS/cmsy/m/n/12 ^^@ \OML/cmm/m/it/12 x\OT1/cmr/m/n/12 )[]
  []
 
 
-Overfull \hbox (59.46515pt too wide) in paragraph at lines 1242--1243
+Overfull \hbox (59.46515pt too wide) in paragraph at lines 1734--1735
 []\TU/lmr/m/n/12 5.Prouver que pour $\OML/cmm/m/it/12 ^^O > \OT1/cmr/m/n/12 0$ 
 \TU/lmr/m/n/12 ,il existe $\OML/cmm/m/it/12 N \OMS/cmsy/m/n/12 2 \U/msb/m/n/12 
 N$ \TU/lmr/m/n/12 tel que pour $\OML/cmm/m/it/12 x \OMS/cmsy/m/n/12 2 \OT1/cmr/
@@ -981,48 +1027,82 @@ m/n/12 [0\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 1]\OML/cmm/m/it/12 ; [] \OMS/cmsy/m
 /n/12 ^^T
  []
 
-[60]
-Chapter 19.
+[84]
+Chapter 21.
 
 Underfull \vbox (badness 1215) has occurred while \output is active []
 
- [61
+ [85
 
 ]
-[62]
-Overfull \hbox (6.44194pt too wide) in paragraph at lines 1290--1290
+[86]
+Overfull \hbox (6.44194pt too wide) in paragraph at lines 1782--1782
 []\TU/lmr/m/n/12 We use the lattice property of $\OT1/cmr/m/n/12 ^^A\OML/cmm/m/
 it/12 :$ \TU/lmr/m/n/12 Let $\OML/cmm/m/it/12 D[] \OT1/cmr/m/n/12 = \OML/cmm/m/
 it/12 D \OMS/cmsy/m/n/12 [ \OML/cmm/m/it/12 D[]:$ \TU/lmr/m/n/12 Let $\OML/cmm/
 m/it/12 D \OT1/cmr/m/n/12 = []$
  []
 
-[63] [64] [65]
+[87] [88] [89]
 File: image//Integration//1.png Graphic file (type bmp)
 <image//Integration//1.png>
- [66]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1424.
- [67]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1424.
- (maths.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 1424.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1424.
+ [90] [91] [92
+
+]
+Chapter 22.
+[93]
+File: image//The Genesis of Fourier Analysis//1.png Graphic file (type bmp)
+<image//The Genesis of Fourier Analysis//1.png>
+ [94]
+File: image//The Genesis of Fourier Analysis//2.png Graphic file (type bmp)
+<image//The Genesis of Fourier Analysis//2.png>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [95]
+File: image//The Genesis of Fourier Analysis//3.png Graphic file (type bmp)
+<image//The Genesis of Fourier Analysis//3.png>
+
+[96]
+File: image//The Genesis of Fourier Analysis//4.png Graphic file (type bmp)
+<image//The Genesis of Fourier Analysis//4.png>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [97]
+[98]
+File: image//The Genesis of Fourier Analysis//5.png Graphic file (type bmp)
+<image//The Genesis of Fourier Analysis//5.png>
+ [99] [100] [101]
+File: image//The Genesis of Fourier Analysis//6.png Graphic file (type bmp)
+<image//The Genesis of Fourier Analysis//6.png>
+ [102] [103] [104] [105]
+File: image//The Genesis of Fourier Analysis//7.png Graphic file (type bmp)
+<image//The Genesis of Fourier Analysis//7.png>
+ [106] [107] [108]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2233.
+ [109]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 2233.
+
+(maths.aux)
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 2233.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2233.
 
 Package rerunfilecheck Info: File `maths.out' has not changed.
-(rerunfilecheck)             Checksum: 8EF06AC61E879C6BA896758C3B750F4A;8009.
+(rerunfilecheck)             Checksum: 56ABA06C88F2F819E579442A7461201A;10012.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1424.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 2233.
  ) 
 Here is how much of TeX's memory you used:
- 17397 strings out of 414493
- 349915 string characters out of 2910403
- 644267 words of memory out of 3000000
- 34363 multiletter control sequences out of 15000+200000
- 548251 words of font info for 122 fonts, out of 3000000 for 9000
+ 17583 strings out of 414493
+ 357134 string characters out of 2910403
+ 647682 words of memory out of 3000000
+ 34538 multiletter control sequences out of 15000+200000
+ 548275 words of font info for 125 fonts, out of 3000000 for 9000
  1348 hyphenation exceptions out of 8191
- 52i,14n,69p,903b,549s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 52i,14n,69p,1055b,549s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on maths.pdf (75 pages).
+Output written on maths.pdf (117 pages).

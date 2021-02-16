@@ -18,8 +18,12 @@
 \theoremstyle{plain}\newtheorem{lem}{\bf Lemme}[chapter]
 \theoremstyle{plain}\newtheorem{axm}{\bf Axiome}[chapter]
 \theoremstyle{plain}\newtheorem{lmm}{\bf Lemme}[chapter]
+\theoremstyle{plain}\newtheorem{exm}{\bf Example}[chapter]
 \theoremstyle{plain}\newtheorem{cor}{\bf Corollaire}[chapter]
 \theoremstyle{remark}\newtheorem{rem}{Remarque}[chapter]
+\newcommand{\reffig}[1]{\text{Figure}\ \ref{#1}}
+
+\newcommand{\refthm}[1]{\text{Theorme}\ \ref{#1}}
 \title{Notes of maths}
 \author{PhilippeMENG}
 \date{\today}
@@ -141,6 +145,227 @@ for $a \in D,$ and set $h(a)=k(a)$ for $a \in A \backslash D ; h$ clearly has th
 
 \end{proof}
 
+\subsection{Monomorphisms}
+There is yet another way to express injectivity, which appears at first more complicated but which is in fact even more basic.
+
+A function $f: A \rightarrow B$ is a monomorphism (or monic) if the following holds:
+for all sets $Z$ and all functions $\alpha^{\prime}, \alpha^{\prime \prime}: Z \rightarrow A$
+$$
+f \circ \alpha^{\prime}=f \circ \alpha^{\prime \prime} \Longrightarrow \alpha^{\prime}=\alpha^{\prime \prime}
+$$
+\begin{prp}
+ A function is injective if and only if it is a monomorphism.
+\end{prp}
+\begin{proof}
+$(\Longrightarrow)$ If a function $f: A \rightarrow B$ is injective, then it has a left-inverse $g: B \rightarrow A$. Now assume that $\alpha^{\prime}, \alpha^{\prime \prime}$ are arbitrary functions from another set $Z$ to $A$ and that
+$$
+f \circ \alpha^{\prime}=f \circ \alpha^{\prime \prime}
+$$
+compose on the left by $g,$ and use associativity of composition:
+$$
+(g \circ f) \circ \alpha^{\prime}=g \circ\left(f \circ \alpha^{\prime}\right)=g \circ\left(f \circ \alpha^{\prime \prime}\right)=(g \circ f) \circ \alpha^{\prime \prime}
+$$
+since $g$ is a left-inverse of $f,$ this says
+$$
+\mathrm{id}_{A} \circ \alpha^{\prime}=\mathrm{id}_{A} \circ \alpha^{\prime \prime}
+$$
+and therefore
+$$
+\alpha^{\prime}=\alpha^{\prime \prime}
+$$
+as needed to conclude that $f$ is a monomorphism.
+
+$(\Longleftarrow)$ Now assume that $f$ is a monomorphism. This says something about arbitrary sets $Z$ and arbitrary functions $Z \rightarrow A$; we are going to use a microscopic portion of this information, choosing $Z$ to be any singleton $\{p\}$. Then assigning functions $\alpha^{\prime}, \alpha^{\prime \prime}: Z \rightarrow A$ amounts to choosing to which elements $a^{\prime}=\alpha^{\prime}(p)$, $a^{\prime \prime}=\alpha^{\prime \prime}(p)$ we should send the single element $p$ of $Z$. For this particular choice of $Z$, the property defining monomorphisms, $f \circ \alpha^{\prime}=f \circ \alpha^{\prime \prime} \Longrightarrow \alpha^{\prime}=\alpha^{\prime \prime},$ becomes $$
+f \circ \alpha^{\prime}(p)=f \circ \alpha^{\prime \prime}(p) \Longrightarrow \alpha^{\prime}=\alpha^{\prime \prime}
+$$
+that is,
+$$
+f\left(a^{\prime}\right)=f\left(a^{\prime \prime}\right) \Longrightarrow \alpha^{\prime}=\alpha^{\prime \prime}
+$$
+Now two functions from $Z=\{p\}$ to $A$ are equal if and only if they send $p$ to the same element, so this says
+$$
+f\left(a^{\prime}\right)=f\left(a^{\prime \prime}\right) \Longrightarrow a^{\prime}=a^{\prime \prime}
+$$
+This has to be true for all $\alpha^{\prime}, \alpha^{\prime \prime},$ that is, for all choices of distinct $a^{\prime}, a^{\prime \prime}$ in $A$. In other words, $f$ has to be injective.
+
+\end{proof} 
+\section{Canonical decomposition} 
+
+The reason why we focus our attention on injective and surjective maps is that they provide the basic 'bricks' out of which any function may be constructed.
+
+To see this, we observe that every function $f: A \rightarrow B$ determines an equivalence relation $\sim$ on $A$ as follows: for all $a^{\prime}, a^{\prime \prime} \in A$
+$a^{\prime} \sim a^{\prime \prime} \Longleftrightarrow f\left(a^{\prime}\right)=f\left(a^{\prime \prime}\right)$
+
+\begin{thm}\label{t1}
+Let $f: A \rightarrow B$ be any function, and define $\sim$ as above. Then $f$ decomposes as follows:
+\begin{figure}[H]\centering\includegraphics[width=1\textwidth]{image//Vocabulaire de theorie des ensembles//5}\end{figure}
+where the first function is the canonical projection $A \rightarrow A / \sim$ (obtained by sending every $a \in A$ to its equivalence class $[a]_{\sim}$), the third function is the inclusion $\operatorname{im} f \subseteq B,$ and the bijection $\tilde{f}$ in the middle is defined by
+$$
+\tilde{f}\left([a]_{\sim}\right):=f(a)
+$$
+for all $a \in A.$
+\end{thm}
+The formula defining $\tilde{f}$ shows immediately that the diagram commutes; so all we have to verify in order to prove this theorem is that
+
+- that formula does define a function:
+
+- that function is in fact a bijection.
+
+The first item is an instance of a class of verifications of the utmost importance. The formula given for $\tilde{f}$ has a colossal built-in ambiguity: the same element in $A / \sim$ may be the equivalence class of many elements of $A$; applying the formula for $\tilde{f}$ requires choosing one of these elements and applying $f$ to it. We have to prove that the result of this operation is independent from this choice: that is, that all possible choices of representatives for that equivalence class lead to the same result. We encode this type of situation by saying that we have to verify that $\tilde{f}$ is well-defined. We will often have to check that the operations we consider are welldefined, in contexts very similar to the one epitomized here.
+\begin{proof}
+
+Spelling out the first item discussed above, we have to verify that, for
+all $a^{\prime}, a^{\prime \prime}$ in $A$,
+$$
+\left[a^{\prime}\right]_{\sim}=\left[a^{\prime \prime}\right]_{\sim} \Longrightarrow f\left(a^{\prime}\right)=f\left(a^{\prime \prime}\right) .
+$$
+Now $\left[a^{\prime}\right]_{\sim}=\left[a^{\prime \prime}\right]_{\sim}$ means that $a^{\prime} \sim a^{\prime \prime},$ and the definition of $\sim$ has been engineered precisely so that this would mean $f\left(a^{\prime}\right)=f\left(a^{\prime \prime}\right)$ as required here. So $\tilde{f}$ is indeed well-defined.
+
+To verify the second item, that is, that $\tilde{f}: A / \sim \rightarrow \operatorname{im} f$ is a bijection, we check explicitly that $\tilde{f}$ is injective and surjective. 
+
+Injective: If $\tilde{f}\left(\left[a^{\prime}\right]_{\sim}\right)=\tilde{f}\left(\left[a^{\prime \prime}\right]_{\sim}\right),$ then $f\left(a^{\prime}\right)=f\left(a^{\prime \prime}\right)$ by definition of $\tilde{f} ;$ hence
+$a^{\prime} \sim a^{\prime \prime}$ by definition of $\sim,$ and then $\left[a^{\prime}\right]_{\sim}=\left[a^{\prime \prime}\right]_{\sim} .$ Therefore
+$$
+\tilde{f}\left(\left[a^{\prime}\right]_{\sim}\right)=\tilde{f}\left(\left[a^{\prime \prime}\right]_{\sim}\right) \Longrightarrow\left[a^{\prime}\right]_{\sim}=\left[a^{\prime \prime}\right]_{\sim}
+$$
+proving injectivity.
+
+Surjective: Given any $b \in \operatorname{im} f$, there is an element $a \in A$ such that $f(a)=b$. Then
+$$
+\tilde{f}\left([a]_{\sim}\right)=f(a)=b
+$$
+by definition of $\tilde{f}$. Since $b$ was arbitrary in $\operatorname{im} f$, this shows that $\tilde{f}$ is surjective, as needed.
+\end{proof}
+\refthm{t1} shows that every function is the composition of a surjection, followed by an isomorphism, followed by an injection. While its proof is trivial, this is a result of some importance, since it is the prototype of a situation that will occur several times. It will resurface every now and then, with names such as 'the first isomorphism theorem'.
+\section{Categories}
+The language of categories is affectionately known as abstract nonsense, so named by Norman Steenrod. This term is essentially accurate and not necessarily derogatory: categories refer to nonsense in the sense that they are all about the 'structure', and not about the 'meaning', of what they represent. The emphasis is less on how you run into a specific set you are looking at and more on how that set may sit in relationship with all other sets. Worse (or better) still, the emphasis is less on studying sets, and functions between sets, than on studying 'things, and things that go from things to things' without necessarily being explicit about what these things are: they may be sets, or groups, or rings, or vector spaces, or modules, or other objects that are so exotic that the reader has no right whatsoever to know about them (yet).
+
+'Categories' will intuitively look like sets at first, and in multiple ways. Categories may make you think of sets, in that they are 'collections of objects', and further there will be notions of 'functions from categories to categories' (called functors). At the same time, every category may make you think of the collection of all sets, since there will be analogs of 'functions' among the things it contains.
+
+\begin{dfn}
+The definition of a category looks complicated at first, but the gist of it may be summarized quickly: a category consists of a collection of 'objects', and of '{\bf morphisms}' between these objects, satisfying a list of natural conditions.
+\end{dfn} 
+
+Note that we refrained from writing a set of objects, opting for the more generic 'collection'. This is an annoying, but unavoidable, difficulty: for example, we want to have a 'category of sets', in which the 'objects' are sets and the 'morphisms' are functions between sets, and the problem is that there simply is not a set of all sets.(That is one thing we learn from Russell’s paradox.) In a sense, the collection of all sets is 'too big' to be a set. There are however ways to deal with such 'collections', and the technical name for them is class. There is a 'class' of all sets (and there will be classes taking care of groups, rings, etc.).
+
+An alternative would be to define a large enough set (called a universe) and then agree that all objects of all categories will be chosen from this gigantic entity. In any case, all we need to know about this is that there is a way to make it work. We will use the term 'class' in the definition, but this will not affect any proof or any other definition. Further, in some of the examples considered below the class in question is a set (we say that the category is small in this case), so we will feel perfectly at home when contemplating these examples.
+
+\begin{dfn}
+A category $\mathrm{C}$ consists of
+
+- a class $\operatorname{Obj}(\mathrm{C})$ of objects of the category; and
+
+- for every two objects $A, B$ of $\mathrm{C},$ a set $\operatorname{Hom}_{\mathrm{C}}(A, B)$ of morphisms, with the properties listed below.(注意morphism是我们在之前没有见过的概念，它是由性质定义的抽象对映关系,而且我们在这里还用用集合把它打包了)
+
+As a prototype to keep in mind, think of the objects as 'sets' and of morphisms as 'functions'. This one example should make the defining properties of morphisms look natural and easy to remember:
+
+- For every object $A$ of $\mathrm{C},$ there exists (at least) one morphism $1_{A} \in \operatorname{Hom}_{\mathrm{C}}(A, A)$ the 'identity' on $A$.
+
+- One can compose morphisms: two morphisms $f \in \operatorname{Hom}_{\mathrm{C}}(A, B)$ and $g \in$ $\operatorname{Hom}_{\mathrm{C}}(B, C)$ determine a morphism $g f \in \operatorname{Hom}_{\mathrm{C}}(A, C) .$ That is, for every
+triple of objects $A, B, C$ of $\mathrm{C}$ there is a function (of sets)(这里的意思是，因为$\operatorname{Hom}_{\mathrm{C}}(...,...)$是集合，而我们强调在集合上建立的关系叫函数)
+$$
+\operatorname{Hom}_{\mathrm{C}}(A, B) \times \operatorname{Hom}_{\mathrm{C}}(B, C) \rightarrow \operatorname{Hom}_{\mathrm{C}}(A, C)
+$$
+and the image of the pair $(f, g)$ is denoted $g f$.
+
+- This 'composition law' is associative: if $f \in \operatorname{Hom}_{\mathrm{C}}(A, B), g \in \operatorname{Hom}_{\mathrm{C}}(B, C)$
+and $h \in \operatorname{Hom}_{\mathrm{C}}(C, D),$ then
+$$
+(h g) f=h(g f)
+$$
+
+- The identity morphisms are identities with respect to composition: that is, for all $f \in \operatorname{Hom}_{\mathrm{C}}(A, B)$ we have
+$$
+f 1_{A}=f, \quad 1_{B} f=f
+$$
+\end{dfn} 
+This is really a mouthful, but again, to remember all this, just think of functions of sets. One further requirement is that the sets
+$$
+\operatorname{Hom}_{\mathrm{C}}(A, B), \quad \operatorname{Hom}_{\mathrm{C}}(C, D)
+$$
+be disjoint unless $A=C, B=D ;$ this is something you do not usually think about, but again it holds for ordinary set-functions(We will often use the term ‘set-function’ to emphasize that we are dealing with a function in
+the context of sets.). That is, if two functions are one and the same, then necessarily they have the same source and the same target: source and target are part of the datum of a set-function.
+
+A morphism of an object $A$ of a category $\mathrm{C}$ to itself is called an endomorphism; $\operatorname{Hom}_{\mathrm{C}}(A, A)$ is denoted $\operatorname{End}_{\mathrm{C}}(A) .$ One of the axioms of a category tells us that this is a 'pointed' set, as $1_{A} \in \operatorname{End}_{\mathrm{C}}(A)$. We should note that composition defines an 'operation' on $\operatorname{End}_{\mathrm{C}}(A):$ if $f, g$ are elements of $\operatorname{End}_{\mathrm{C}}(A),$ so is their composition $g f$.
+
+Writing '$f \in \operatorname{Hom}_{C}(A, B)$' gets tiresome in the long run. If the category is understood, one may safely drop the index $C,$ or even use arrows as we do with set-functions: $f: A \rightarrow B$. This also allows us to draw diagrams of morphisms in any category; a diagram is said to 'commute' (or to be a 'commutative' diagram) if all ways to traverse it lead to the same results of composing morphisms along the way.
+
+\begin{exm}
+Suppose $S$ is a set and $\sim$ is a relation on $S$ satisfying the reflexive and transitive properties. Then we can encode this data into a category:
+
+- objects: the elements of $S$;
+
+- morphisms: if $a, b$ are objects (that is, if $a, b \in S$ ), then let $\operatorname{Hom}(a, b)$ be the set consisting of the element $(a, b) \in S \times S$ if $a \sim b,$ and let $\operatorname{Hom}(a, b)=\emptyset$ otherwise.
+
+Note that (unlike in $\textbf {Set}$($\textbf{Set}$ denote the category of sets.)) there are very few morphisms: at most one for any pair of objects, and no morphisms at all between 'unrelated' objects.
+
+We have to define 'composition of morphisms' and verify that the conditions are satisfied. First of all, do we have 'identities'? If $a$ is an object (that is, if $a \in S)$, we need to find an element
+$$
+1_{a} \in \operatorname{Hom}(a, a)
+$$
+This is precisely why we are assuming that $\sim$ is reflexive: this tells us that $\forall a$, $a \sim a ;$ that is, $\operatorname{Hom}(a, a)$ consists of the single element $(a, a) .$ So we have no choice:
+we must let
+$$
+1_{a}=(a, a) \in \operatorname{Hom}(a, a)
+$$
+As for composition, let $a, b, c$ be objects (that is, elements of $S$ ) and
+$$
+f \in \operatorname{Hom}(a, b), \quad g \in \operatorname{Hom}(b, c)
+$$
+we have to define a corresponding morphism $g f \in \operatorname{Hom}(a, c)$. Now,
+$$
+f \in \operatorname{Hom}(a, b)
+$$
+tells us that $\operatorname{Hom}(a, b)$ is nonempty, and according to the definition of morphisms in this category that means that $a \sim b,$ and $f$ is in fact the element $(a, b)$ of $S \times S$. Similarly, $g \in \operatorname{Hom}(b, c)$ tells us $b \sim c$ and $g=(b, c) .$ Now
+$$
+a \sim b \text { and } b \sim c \Longrightarrow a \sim c
+$$
+since we are assuming that $\sim$ is transitive. This tells us that $\operatorname{Hom}(a, c)$ consists of the single element $(a, c) .$ Thus we again have no choice: we must let
+$$
+g f:=(a, c) \in \operatorname{Hom}(a, c)
+$$
+Is this operation associative? If $f \in \operatorname{Hom}(a, b), g \in \operatorname{Hom}(b, c),$ and $h \in \operatorname{Hom}(c, d),$
+then necessarily $$
+f=(a, b), \quad g=(b, c), \quad h=(c, d)
+$$
+and
+$$
+g f=(a, c), \quad h g=(b, d)
+$$
+and hence
+$$
+h(g f)=(a, d)=(h g) f,
+$$
+proving associativity.
+
+The identity morphisms are identities with respect to composition.
+
+The most trivial instance of this construction is the category obtained from a set $S$ taken with the equivalence relation ' $=$; that is, the only morphisms are the identity morphisms. These categories are called {\bf discrete}.
+\end{exm}
+\begin{exm}
+The example is very abstract, but thinking about it will make you rather comfortable with everything we have seen so far; and it is a very common construction.
+
+Let $\mathrm{C}$ be a category, and let $A$ be an object of $\mathrm{C}$. We are going to define a category $\mathrm{C}_{A}$ whose objects are certain morphisms in $\mathrm{C}$ and whose morphisms are certain diagrams of $\mathrm{C}$ (surprise!).
+
+- $\operatorname{Obj}\left(\mathrm{C}_{A}\right)=$ all morphisms from any object of $\mathrm{C}$ to $A$; thus, an object of $\mathrm{C}_{A}$ is a morphism $f \in \operatorname{Hom}_{\mathrm{C}}(Z, A)$ for some object $Z$ of $\mathrm{C}$. Pictorially, an object of $\mathrm{C}_{A}$ is an arrow $Z \stackrel{f}{\rightarrow} A$ in $\mathrm{C} ;$ these are often drawn 'top-down', as in
+\begin{figure}[H]\centering\includegraphics[width=0.1\textwidth]{image//Vocabulaire de theorie des ensembles//6}\end{figure}
+What are morphisms in $C_{A}$ going to be? There really is only one sensible way to assign morphisms to a category with objects as above.
+
+- Let $f_{1}, f_{2}$ be objects of $C_{A},$ that is, two arrows in C. 
+\begin{figure}[H]\centering\includegraphics[width=0.2\textwidth]{image//Vocabulaire de theorie des ensembles//7}\end{figure}
+Morphisms $f_{1} \rightarrow f_{2}$ are defined to be commutative diagrams in the 'ambient' category $\mathrm{C}$.
+\begin{figure}[H]\centering\includegraphics[width=0.3\textwidth]{image//Vocabulaire de theorie des ensembles//8}\end{figure}
+That is, morphisms $f_{1} \rightarrow f_{2}$ correspond precisely to those morphisms $\sigma: Z_{1} \rightarrow Z_{2}$ in $C$ such that $f_{1}=f_{2} \sigma$.
+
+The identities are inherited from the identities in $\mathrm{C}$ : for $f: Z \rightarrow A$ in $\mathrm{C}_{A}$, the identity $1_{f}$ corresponds to the diagram which commutes by virtue of the fact that $\mathrm{C}$ is a category(保证了存在性). 
+\begin{figure}[H]\centering\includegraphics[width=0.3\textwidth]{image//Vocabulaire de theorie des ensembles//9}\end{figure}
+Composition is also a subproduct of composition in $\mathrm{C}$. Two morphisms $f_{1} \rightarrow f_{2} \rightarrow f_{3}$ in $\mathrm{C}_{A}$ correspond to putting two commutative diagrams side-by-side:
+\begin{figure}[H]\centering\includegraphics[width=0.4\textwidth]{image//Vocabulaire de theorie des ensembles//10}\end{figure}
+And then it follows (again because $\mathrm{C}$ is a category!(保证了复合的可行性)) that the diagram obtained by removing the central arrow also commutes,i.e.,
+\begin{figure}[H]\centering\includegraphics[width=0.4\textwidth]{image//Vocabulaire de theorie des ensembles//11}\end{figure}
+
+Categories constructed in this fashion are called slice categories in the literature; they are particular cases of comma categories.
+\end{exm}
 
 
 
@@ -150,8 +375,34 @@ for $a \in D,$ and set $h(a)=k(a)$ for $a \in A \backslash D ; h$ clearly has th
 
 
 
-        \chapter{Logarithme}
-        \paragraph{Propriété fondamentale} Une fonction continue strictement monotone sur un intervalle est une bijection de cet intervalle sur son image.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\chapter{Logarithme}
+\paragraph{Propriété fondamentale} Une fonction continue strictement monotone sur un intervalle est une bijection de cet intervalle sur son image.
 
 
         \paragraph{Exposant rationnel}
@@ -571,6 +822,185 @@ $\mathfrak{BW}$中，等于说是对$\mathfrak{BW}$中性质命题的否定，�
 
 Dans tous les cas, on a donc construit une suite extraite convergente, ce qui prouve le théorème de Bolzano-Weierstrass.
 \end{proof}
+
+\chapter{Infinite series}
+The notion of convergence of a sequence allows us to consider infinite sums, or series. Once again, we take either $\mathbf{N}$ or $\mathbf{Z}^{+}$ as index set. We shall generally consider the case where the terms of the series are complex-valued; since $\mathbf{R} \subseteq$ C, the results will also apply to the case where all the terms are real-valued. Suppose that $\left(z_{j}\right)_{j=0}^{\infty}$ is a sequence of complex numbers. We set
+$$
+s_{n}=\sum_{j=0}^{n} z_{j}=z_{0}+\cdots+z_{n}
+$$
+where $s_{n}$ is the $n$ th partial sum. If $s_{n} \rightarrow s$ as $n \rightarrow \infty$, we say that the infinite sum, or infinite series, $\sum_{j=0}^{\infty} z_{j}$ converges to $s .$ If $s_{n}$ does not converge, then we say that $\sum_{j=0}^{\infty} z_{j}$ diverges.
+
+Here are two easy examples: as we shall see, the first one is particularly useful. Suppose that $|z|<1 .$ Let $z_{j}=z^{j}$ for $j \in \mathbf{Z}^{+} .$ Then
+$$
+(1-z) s_{n}=\left(1+z+\cdots+z^{n}\right)-\left(z+z^{2}+\cdots+z^{n+1}\right)=1-z^{n+1}
+$$
+so that
+$$
+s_{n}=\frac{1-z^{n+1}}{1-z}=\frac{1}{1-z}-\frac{z^{n+1}}{1-z} \text { and } s_{n} \rightarrow \frac{1}{1-z} \text { as } n \rightarrow \infty
+$$
+Thus $\sum_{j=0}^{\infty} z^{j}=1 /(1-z).$
+
+Secondly, let
+$$
+a_{j}=\frac{1}{j(j+1)}=\frac{1}{j}-\frac{1}{j+1} \text { for } j \in \mathbf{N}
+$$
+Then
+$$
+s_{n}=\sum_{j=1}^{n} a_{j}=\left(1-\frac{1}{2}\right)+\left(\frac{1}{2}-\frac{1}{3}\right)+\cdots+\left(\frac{1}{n}-\frac{1}{n+1}\right)=1-\frac{1}{n+1}
+$$
+so that $s_{n} \rightarrow 1: \sum_{j=1}^{\infty} 1 / j(j+1)=1$.
+We can apply the results that we have obtained about convergent sequences to infinite series. For example, a complex series is convergent if and only if the sum of the real parts and the sum of the imaginary parts of the terms both converge.
+\begin{prp}
+Suppose that $z_{j}=x_{j}+i y_{j}$ and that $s=\sigma+i \tau .$ Then $\sum_{j=0}^{\infty} z_{j}$ converges to $s$ if and only if $\sum_{j=0}^{\infty} x_{j}$ converges to $\sigma$ and $\sum_{j=0}^{\infty} y_{j}$ converges to $\tau$.
+\end{prp}
+\begin{thm}
+	Suppose that $\sum_{j=0}^{\infty} z_{j}$ converges to $s$ and that $\sum_{j=0}^{\infty} w_{j}$ converges to $t .$
+	
+	(i) When it exists, the sum is unique: if $\sum_{j=0}^{\infty} z_{j}=s^{\prime},$ then $s=s^{\prime}$.
+	
+	(ii)$\sum_{j=0}^{\infty}\left(z_{j}+w_{j}\right)$ converges to $s+t$.
+	
+	(iii) If $c \in \mathbf{C}$ then $\sum_{j=0}^{\infty} c z_{j}$ converges to cs.
+	
+	(iv) If $z_{j}$ and $w_{j}$ are real, and $z_{j} \leq w_{j}$ for all $j,$ then $s \leq t$.
+\end{thm}
+
+Suppose that $\left(j_{k}\right)_{k=0}^{\infty}$ is a strictly increasing sequence in $\mathbf{Z}^{+} .$ Set $b_{0}=$ $\sum_{j=0}^{j_{0}} z_{j},$ and set $b_{k}=\sum_{j=j_{k-1}+1}^{j_{k}} z_{j}$ for $k>0 .$ Then the sequence $\left(b_{k}\right)_{k=0}^{\infty}$
+is called a block sequence, or bracketed sequence, derived from $\left(a_{j}\right)_{j=0}^{\infty} .$ 
+\begin{prp}
+If $\sum_{j=0}^{\infty} z_{j}$ converges to $s$ and $\left(b_{k}\right)_{k=0}^{\infty}$ is a block sequence derived from it, then $\sum_{k=0}^{\infty} b_{k}$ converges to $s$.
+\end{prp} 
+The converse is false in general. Let $z_{j}=$ $(-1)^{j},$ for $j \in \mathbf{N}^{+} .$ Then $s_{2 n}=0$ and $s_{2 n+1}=1$ for all $n \in \mathbf{Z}^{+},$ so that $\sum_{j=0}^{\infty} z_{j}$ diverges. If we set $j_{k}=2 k+1,$ then $b_{k}=z_{2 k}+z_{2 k+1}=0$ for $k \in \mathbf{N}^{+},$ so that $\sum_{k=1}^{\infty} b_{k}$ converges to 0 We also have the following simple result.
+\begin{prp}
+If $\sum_{j=0}^{\infty} z_{j}$ converges, then $z_{j} \rightarrow 0$ as $j \rightarrow \infty$
+\end{prp}
+ \begin{proof}
+ Suppose that the sum is $s$. Then $s_{j} \rightarrow s$ and $s_{j-1} \rightarrow s$ as $j \rightarrow \infty,$ so that $z_{j}=s_{j}-s_{j-1} \rightarrow 0$ as $j \rightarrow \infty$.
+ \end{proof}
+
+The general principle of convergence takes the following form.
+\begin{thm}[The general principle of convergence]Suppose that  $\left(z_{j}\right)_{j=0}^{\infty}$ is a sequence of complex numbers. Then $\sum_{j=0}^{\infty} z_{j}$ converges if and only if given $\epsilon>0$ there exists $n_{0}$ such that $\left|s_{n}-s_{m}\right|=\left|\sum_{j=m+1}^{n} z_{j}\right|<\epsilon$ for $n>m \geq n_{0}$.
+\end{thm}
+\section{Series with non-negative terms}
+Series with real non-negative terms behave particularly well.
+\begin{thm}
+Suppose that $\left(a_{j}\right)_{j=0}^{\infty}$ is a sequence of non-negative real numbers, and that $s_{n}=\sum_{j=1}^{n} a_{j} .$ Then $\left(s_{n}\right)_{n=0}^{\infty}$ is an increasing sequence.
+
+ Either $\left(s_{n}\right)_{n=0}^{\infty}$ is bounded, in which case $\sum_{j=0}^{\infty} a_{j}$ converges to $\sup _{n} s_{n},$ or $s_{n} \rightarrow \infty,$ in which case we say that $\sum_{j=0}^{\infty} a_{j}$ diverges to $+\infty,$ and write $\sum_{j=0}^{\infty} a_{j}=+\infty$
+\end{thm} 
+
+This theorem indicates that summing a series of non-negative terms is reasonably straightforward. Here are some of its consequences; the first is one of many tests for convergence.
+
+\begin{cor}[The comparison test]
+$\quad$ If $0 \leq c_{j} \leq a_{j}$ for all $j \geq j_{0}$ and $\sum_{j=0}^{\infty} a_{j}$ converges then $\sum_{j=0}^{\infty} c_{j}$ converges, and $\sum_{j=0}^{\infty} c_{j} \leq \sum_{j=0}^{\infty} a_{j}.$
+\end{cor} 
+For example, $\sum_{j=1}^{\infty} 1 / j^{2}$ converges, since $1 / j^{2} \leq 2 / j(j+1)$. Note that this corollary does not tell us what the sum is, although we can deduce that it is at most $2 .$ (In fact the sum is $\pi^{2} / 6$; we shall prove this much later!)
+\begin{cor}
+If $\left(a_{j}\right)_{j=0}^{\infty}$ is a sequence of non-negative numbers and $\left(b_{k}\right)_{k=0}^{\infty}$ is a block sequence derived from it, then $\sum_{j=1}^{\infty} a_{j}$ converges to $s$ if and only if $\sum_{k=1}^{\infty} b_{k}$ converges to $s$.
+\end{cor}
+\begin{proof}
+$s_{n} \rightarrow s$ as $n \rightarrow \infty$ if and only if $s_{j_{l}} \rightarrow s$ as $l \rightarrow \infty,$ and $s_{j_{l}}=$ $\sum_{k=0}^{l} b_{k}$
+\end{proof}
+We can say more when $\left(a_{j}\right)_{j=0}^{\infty}$ is a decreasing sequence of non-negative numbers.
+\begin{cor}[The compression principle]
+If $\left(a_{j}\right)_{j=1}^{\infty}$ is a decreasing sequence of non-negative real numbers, then $\sum_{j=1}^{\infty} a_{j}$ converges if and only if $\sum_{k=0}^{\infty} 2^{k} a_{2^{k}}$ converges. If so then
+$$
+\frac{1}{2} \sum_{k=0}^{\infty} 2^{k} a_{2^{k}} \leq \sum_{j=0}^{\infty} a_{j} \leq \sum_{k=0}^{\infty} 2^{k} a_{2^{k}}
+$$
+\end{cor}
+\begin{proof}
+Let $\left(b_{k}\right)_{k=0}^{\infty}$ be the block sequence obtained by taking $j_{k}=2^{k} .$ Then
+$$
+\frac{1}{2} 2^{k} a_{2^{k}}=2^{k-1} a_{2^{k}} \leq b_{k}=a_{2^{k-1}+1}+\cdots+a_{2^{k}} \leq 2^{k-1} a_{2^{k-1}}
+$$
+since $\left(a_{j}\right)_{j=0}^{\infty}$ is decreasing, and there are $2^{k-1}$ summands.
+\end{proof}
+\begin{cor}[The harmonic series]
+$\sum_{j=1}^{\infty} 1 / j$ diverges to $+\infty$.
+\end{cor}  
+\begin{proof}
+For if $a_{j}=1 / j$ then $2^{k} a_{2^{k}}=1,$ so that the result follows from the preceding corollary.
+\end{proof}
+
+ \begin{cor}[Cauchy's test]
+ Suppose that $\left(a_{j}\right)_{j=0}^{\infty}$ is a bounded sequence of non-negative real numbers. If $\lim \sup _{j \rightarrow \infty} a_{j}^{1 / j}<1$ then $\sum_{j=1}^{\infty} a_{j}$
+converges, and if $\limsup _{j \rightarrow \infty} a_{j}^{1 / j}>1$ then $\sum_{j=1}^{\infty} a_{j}=+\infty .$
+ \end{cor}
+\begin{proof}
+In the first case, choose $r$ such that $\limsup _{j \rightarrow \infty} a_{j}^{1 / j}<r<1 .$ Then there exists $j_{0}$ such that $a_{j}^{1 / j}<r$ for $j \geq j_{0}$. Thus $a_{j} \leq r^{j}$ for $j \geq j_{0}$ and so, using the comparison test, $\sum_{j=1}^{\infty} a_{j}$ converges.
+
+In the second case, for each $j \in \mathbf{Z}^{+}$ there exists $k \geq j$ such that $a_{k}^{1 / k}>1$ so that $a_{k}>1$. Thus $\left(a_{j}\right)_{j=0}^{\infty}$ is not a null sequence and so $\sum_{j=1}^{\infty} a_{j}$ diverges to $+\infty$.
+\end{proof}
+\begin{cor}[D'Alembert's ratio test]
+Suppose that $\left(a_{j}\right)_{j=0}^{\infty}$is a sequence of positive real numbers. If $\lim \sup _{j \rightarrow \infty} a_{j+1} / a_{j}<1$ then $\sum_{j=1}^{\infty} a_{j}$
+converges. If $\lim \inf _{j \rightarrow \infty} a_{j+1} / a_{j}>1$ then $\sum_{j=1}^{\infty} a_{j}$ diverges to $+\infty$
+\end{cor}
+\begin{proof}
+	In the first case, choose $r$ such that $\lim \sup _{j \rightarrow \infty} a_{j+1} / a_{j}<r<1$. Then there exists $j_{0}$ such that $a_{j+1} / a_{j}<r$ for $j \geq j_{0} .$ Thus if $j>j_{0}$ then
+	$$
+	a_{j}=\left(\frac{a_{j}}{a_{j-1}}\right)\left(\frac{a_{j-1}}{a_{j-2}}\right) \ldots\left(\frac{a_{j_{0}+1}}{a_{j_{0}}}\right) a_{j_{0}} \leq r^{j-j_{0}} a_{j_{0}}=\left(a_{j_{0}} r^{j_{0}}\right) r^{j}
+	$$
+	and so, taking the terms $a_{1}, \ldots, a_{j_{0}}$ into account, there exists $M$ such that $a_{j} \leq M r^{j}$ for all $j .$ By the comparison test, $\sum_{j=1}^{\infty} a_{j}$ converges.
+	
+	In the second case, there exists $j_{1}$ such that $a_{j+1}>a_{j}$ for $j \geq j_{1},$ so that $a_{j} \geq a_{j_{1}}$ for $j \geq j_{1}$. Thus $\left(a_{j}\right)_{j=0}^{\infty}$ is not a null sequence, so that $\sum_{j=1}^{\infty} a_{j}$ diverges to $+\infty$.
+\end{proof}
+It is important to note that neither corollary gives any information when $\limsup _{j \rightarrow \infty} a_{j}^{1 / j}=1$ or when $\limsup _{j \rightarrow \infty} a_{j} / a_{j+1}=1 .$ When $a_{j}=1 / j$
+the sum diverges, and when $a_{j}=1 / j^{2},$ the sum converges. In either case,
+$$
+a_{j}^{1 / j} \rightarrow 1 \text { and } a_{j+1} / a_{j} \rightarrow 1 \text { as } j \rightarrow \infty
+$$
+We use D'Alembert's ratio test to introduce the exponential function, one of the most important functions in analysis. Suppose that $x \geq 0 .$ Let $a_{j}=x^{j} / j !$. Then $a_{j+1} / a_{j}=x /(j+1)$ and $x /(j+1) \rightarrow 0$ as $j \rightarrow \infty$
+so that $\sum_{j=0}^{\infty} x^{j} / j !$ converges, to $\exp (x),$ say. The mapping $x \rightarrow \exp (x)$ is the exponential function. We set $e=\exp (1)=\sum_{j=0}^{\infty} 1 / j ! .$ Note that since $1 / n ! \leq 1 / 2^{n-1},$ it follows that
+$$
+2 \leq e \leq 1+\sum_{j=1}^{\infty} \frac{1}{2^{j-1}}=3
+$$
+In fact, $e=2.718281828 \ldots .$ We shall extend this definition for negative $x$ and for complex $x$.
+
+ Suppose that $x$ is a positive real number.We set $x_{n}=\left\lfloor 2^{n} x\right\rfloor / 2^{n}$. Let $a_{0}=x_{0}=\lfloor x\rfloor$ and let $a_{n}=2^{n}\left(x_{n}-x_{n-1}\right)$ for $n \in \mathbf{N} .$ Then $a_{n}=0$ or 1 and
+$$
+x_{n}=a_{0}+\left(\frac{a_{1}}{2}+\frac{a_{2}}{2^{2}}+\cdots+\frac{a_{n}}{2^{n}}\right)
+$$
+Thus $x=\sum_{n=0}^{\infty}\left(a_{n} / 2^{n}\right) .$ We can write this as
+$x=a_{0} \cdot a_{1} a_{2} \ldots$
+This is the binary expansion of $x .$ Note that, with this procedure, recurrent 1s are avoided.
+
+We can of course also consider expansions with bases other than 2 . We can for example write $u=u_{0}+\sum_{j=1}^{\infty} u_{j} / 10^{j}$ where $0 \leq u_{j} \leq 9,$ to obtain the familiar decimal expansion of $u,$ and we can write $v=v_{0}+\sum_{n=1}^{\infty} v_{j} / 3^{j},$ where $v_{j}=0,1$ or $2 ;$ this is the ternary expansion of $v .$ There are other possibilities:
+for example, we can write $w=w_{0}+\sum_{j=2}^{\infty} w_{j} / j !$, where $0 \leq w_{j}<j$.
+
+We can use these ideas to show that $\mathbf{R}$ is uncountable.
+\begin{thm}
+The set $\mathbf{R}$ of real numbers is uncountable.
+\end{thm}
+\begin{proof}
+We give two proofs.
+
+The first was given by Cantor in $1891 .$ It is enough to show that $[0,1)=\{x \in \mathbf{R}: 0 \leq x<1\}$ is uncountable. Suppose that $\left(x_{n}\right)_{n=1}^{\infty}$ is a sequence in [0,1) . We show that there exists $y \in[0,1)$ which does not occur in the sequence, so that there can be no surjective mapping of $\mathbf{N}$ onto [0,1) . Let $x_{n}=0 . x_{n 1} x_{n 2} \ldots$ be the decimal expansion of $x_{n} .$ We set $y_{n}=0$ if $x_{n n} \neq 0,$ and $y_{n}=2$ if $x_{n n}=0 .$ The sum $\sum_{n=1}^{\infty} y_{n} / 10^{n}$ converges, to $y,$ say. From the construction, $\left|x_{n}-y\right| \geq 1 / 10^{n},$ and so $y \neq x_{n},$ for any $n$.
+
+For the second proof, we define an injective map $c$ from $P(\mathbf{N})$ into [0,1]$;$ since $P(\mathbf{N})$ is uncountable, so is $[0,1] .$ This time, let us use ternary expansions. Suppose that $A \subseteq \mathbf{N}$. Let $a_{j}=2$ if $j \in A,$ and let $a_{j}=0$ if $j \notin A$ Then $\sum_{j=1}^{\infty} a_{j} / 3^{j}$ converges, to $c(A),$ say. Suppose that $A \neq B,$ and that $k$ is the least integer in exactly one of $A$ and $B .$ Then $|c(A)-c(B)| \geq$ $2 / 3^{k}-\sum_{j=k+1}^{\infty} 2 / 3^{j}=1 / 3^{k},$ and so $c(A) \neq c(B) .$ Thus the mapping
+$C: A \rightarrow c(A): P(\mathbf{N}) \rightarrow[0,1]$ is injective. We shall meet this function again later.
+\end{proof}
+
+Cantor's result, first proved by him in $1873,$ was very controversial. We know that the rationals are countable, and so there are 'many more' irrationals than rationals. We can say more. A real number $x$ is algebraic if there exists a non-zero polynomial $p$ with rational coefficients such that $x$ is a root of $p ;$ otherwise it is transcendental. For example, radicals (numbers of the form $k^{1 / n}$ ) are algebraic. So are the three real roots of the quintic $x^{5}-4 x+2$, although, following the results of Ruffini and Abel, these roots cannot be expressed in term of radicals. It can be hard to decide whether a particular number is algebraic or transcendental, and it was only in 1844 that Liouville first showed that any transcendental number existed. In 1851 he gave the first explicit example, showing that the number $\sum_{n=1}^{\infty} 1 / 10^{n !}$ is trancendental. It is easy to see that $e=\sum_{n=0}^{\infty} 1 / n !$ is not rational. If $e=p / q,$ then $q ! e$ must be an integer; but
+$$
+q ! e=(q !+q !+q ! / 2 !+\cdots+1)+\left(\frac{1}{q}+\frac{1}{q(q+1)}+\cdots\right)
+$$
+The first term is an integer, and the second is less than 1 , giving a contradiction. It is much harder to determine whether $e$ is algebraic or transcendental, and it was only in 1873 (the same year as the first proof of Cantor's theorem) that Hermite showed that $e$ is transcendental, whereas the transcendence of $\pi$ was only established by Lindemann nine years later, in $1882 .$ But the set of algebraic numbers is countable, and so there are 'many more' transcendental numbers than algebraic ones! One valid objection to this argument is that it is non-constructive; it does not give a method for producing transcendental numbers. It is however the case that many important results of analysis have this non-constructive property.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 \chapter{Dérivation}
 1. 导数的定义: Soit $f: I \longrightarrow R$ et $a \in I .$ On dit que $f$ est dérivable en $a$ si $\lim _{x \rightarrow a} \frac{f(x)-f(a)}{x-a}$ existe et est finie. On note alors : $f^{\prime}(a)=\lim _{x \rightarrow a} \frac{f(x)-f(a)}{x-a}$.
 
@@ -1194,6 +1624,68 @@ $f_{|G}\in\mathcal{L}(G,F)$
 et $f_{|H}\in\mathcal{L}(H,F)$,c'est-à-dire $\phi(f)=(g,h)$.Par conséquant,$\phi$ est surjective.
 
 \end{proof}
+
+\chapter{Eigenvalues and Eigenvectors}
+\section{Invariant Subspaces}
+In this chapter we develop the tools that will help us understand the structure of operators. Recall that an operator is a linear map from a vector space to itself. Recall also that we denote the set of operators on $V$ by $\mathcal{L}(V) ;$ in other words, $\mathcal{L}(V)=\mathcal{L}(V, V)$.
+
+Let's see how we might better understand what an operator looks like. Suppose $T \in \mathcal{L}(V)$. If we have a direct sum decomposition
+\begin{equation}
+V=U_{1} \oplus \cdots \oplus U_{m},\label{1}
+\end{equation}
+where each $U_{j}$ is a proper subspace of $V$, then to understand the behavior of $T$, we need only understand the behavior of each $\left.T\right|_{U_{j}}$; here $\left.T\right|_{U_{j}}$ denotes the restriction of $T$ to the smaller domain $U_{j} .$ Dealing with $\left.T\right|_{U_{j}}$ should be easier than dealing with $T$ because $U_{j}$ is a smaller vector space than $V$. However, if we intend to apply tools useful in the study of operators (such as taking powers), then we have a problem:
+$\left.T\right|_{U_{j}}$ may not map $U_{j}$ into itself; in other words, $\left.T\right|_{U_{j}}$ may not be an operator on $U_{j}$. Thus we are led to consider only decompositions of the form $\ref{1}$ where $T$ maps each $U_{j}$ into itself.
+
+The notion of a subspace that gets mapped into itself is sufficiently important to deserve a name. Thus, for $T \in \mathcal{L}(V)$ and $U$ a subspace of $V,$ we say that $U$ is \textbf{invariant} under $T$ if $u \in U$ implies $T u \in U$. In other words, $U$ is invariant under $T$ if $\left.T\right|_{U}$ is an operator on $U$. For example, if $T$ is the operator of differentiation on $\mathcal{P}_{7}(\mathbf{R})$, then $\mathcal{P}_{4}(\mathbf{R})$ (which is a subspace of $\left.\mathcal{P}_{7}(\mathbf{R})\right)$ is invariant under $T$ because the derivative of any polynomial of degree at most 4 is also a polynomial with degree at most 4.
+
+Let's look at some easy examples of invariant subspaces. Suppose $T \in \mathcal{L}(V)$. Clearly \{0\} is invariant under $T$. Also, the whole space $V$ is obviously invariant under $T$. Must $T$ have any invariant subspaces other than \{0\} and $V ?$ Later we will see that this question has an affirmative answer for operators on complex vector spaces with dimension greater than 1 and also for operators on real vector spaces with dimension greater than 2.
+
+If $T \in \mathcal{L}(V),$ then null $T$ is invariant under $T$ (proof: if $u \in \operatorname{null} T$, then $T u=0$, and hence $T u \in$ null $T$ ). Also, range $T$ is invariant under $T$ (proof: if $u \in$ range $T$, then $T u$ is also in range $T$, by the definition of range). Although null $T$ and range $T$ are invariant under $T$, they do not necessarily provide easy answers to the question about the existence of invariant subspaces other than \{0\} and $V$ because null $T$ may equal \{0\} and range $T$ may equal $V$ (this happens when $T$ is invertible).
+
+We will return later to a deeper study of invariant subspaces. Now we turn to an investigation of the simplest possible nontrivial invariant subspaces-invariant subspaces with dimension $1 .$
+
+How does an operator behave on an invariant subspace of dimension $1 ?$ Subspaces of $V$ of dimension 1 are easy to describe. Take any nonzero vector $u \in V$ and let $U$ equal the set of all scalar multiples of $u$ :
+\begin{equation}
+U=\{a u: a \in \mathbf{F}\}\label{2} .
+\end{equation}
+Then $U$ is a one-dimensional subspace of $V$, and every one-dimensional subspace of $V$ is of this form. If $u \in V$ and the subspace $U$ defined by $\ref{2}$ is invariant under $T \in \mathcal{L}(V),$ then $T u$ must be in $U,$ and hence there must be a scalar $\lambda \in \mathbf{F}$ such that $T u=\lambda u .$ Conversely, if $u$ is a nonzero vector in $V$ such that $T u=\lambda u$ for some $\lambda \in \mathbf{F}$, then the subspace $U$ defined by $\ref{2}$ is a one-dimensional subspace of $V$ invariant under $T$.
+
+The equation
+\begin{equation}
+T u=\lambda u\label{3}
+\end{equation}
+which we have just seen is intimately connected with one-dimensional invariant subspaces, is important enough that the vectors $u$ and scalars $\lambda$ satisfying it are given special names. Specifically, a scalar $\lambda \in \mathbf{F}$ is called an \textbf{eigenvalue} of $T \in \mathcal{L}(V)$ if there exists a nonzero vector $u \in V$ such that $T u=\lambda u .$ We must require $u$ to be nonzero because with $u=0$ every scalar $\lambda \in \mathbf{F}$ satisfies $\ref{3}.$ The comments above show that $T$ has a one-dimensional invariant subspace if and only if $T$ has an eigenvalue.
+
+The equation $T u=\lambda u$ is equivalent to $(T-\lambda I) u=0,$ so $\lambda$ is an eigenvalue of $T$ if and only if $T-\lambda I$ is not injective.$\lambda$ is an eigenvalue of $T$ if and only if $T-\lambda I$ is not invertible, and this happens if and only if $T-\lambda I$ is not surjective.
+
+Suppose $T \in \mathcal{L}(V)$ and $\lambda \in \mathbf{F}$ is an eigenvalue of $T .$ A vector $u \in V$ is called an eigenvector of $T$ (corresponding to $\lambda$ ) if $T u=\lambda u$. Because $\ref{3}$ is equivalent to $(T-\lambda I) u=0$, we see that the set of eigenvectors of $T$ corresponding to $\lambda$ equals $\operatorname{null}(T-\lambda I) .$ In particular, the set of eigenvectors of $T$ corresponding to $\lambda$ is a subspace of $V$.
+
+Let's look at some examples of eigenvalues and eigenvectors. If $a \in \mathbf{F}$, then $a I$ has only one eigenvalue, namely, $a$, and every vector is an eigenvector for this eigenvalue.
+
+For a more complicated example, consider the operator $T \in \mathcal{L}\left(\mathbf{F}^{2}\right)$ defined by
+\begin{equation}
+T(w, z)=(-z, w)\label{4}
+\end{equation}
+If $\mathbf{F}=\mathbf{R}$, then this operator has a nice geometric interpretation: $T$ is just a counterclockwise rotation by $90^{\circ}$ about the origin in $\mathbf{R}^{2} .$ An operator has an eigenvalue if and only if there exists a nonzero vector in its domain that gets sent by the operator to a scalar multiple of itself. The rotation of a nonzero vector in $\mathbf{R}^{2}$ obviously never equals a scalar multiple of itself. Conclusion: if $\mathbf{F}=\mathbf{R}$, the operator $T$ defined by $\ref{4}$
+has no eigenvalues. However, if $\mathbf{F}=\mathbf{C},$ the story changes. To find eigenvalues of $T$, we must find the scalars $\lambda$ such that
+$$
+T(w, z)=\lambda(w, z)
+$$
+has some solution other than $w=z=0$. For $T$ defined by $\ref{4}$ , the equation above is equivalent to the simultaneous equations
+\begin{equation}
+-z=\lambda w, \quad w=\lambda z\label{5}
+\end{equation}
+
+Substituting the value for $w$ given by the second equation into the first equation gives $-z=\lambda^{2} z$
+Now $z$ cannot equal 0 (otherwise $\ref{5}$ implies that $w=0$; we are looking for solutions to $\ref{5}$ where $(w, z)$ is not the 0 vector), so the equation above leads to the equation
+$$
+-1=\lambda^{2}
+$$
+The solutions to this equation are $\lambda=i$ or $\lambda=-i$. You should be able to verify easily that $i$ and $-i$ are eigenvalues of $T .$ Indeed, the eigenvectors corresponding to the eigenvalue $i$ are the vectors of the form $(w,-w i)$, with $w \in \mathbf{C}$, and the eigenvectors corresponding to the eigenvalue $-i$ are the vectors of the form $(w, w i),$ with $w \in \mathbf{C}.$
+
+
+
+
 \chapter{Polynômes}
 \section{Théorème d'aporoximation de Weierstrass à l'aide des polynômes de Bernstein}
 \begin{thm}[Théorème d'approximation de Weierstrass]
@@ -1419,6 +1911,323 @@ so that $S_{D_{r}} \rightarrow \overline{\int_{a}^{b}} f(x) d x$ as $r
 
 
 \end{proof}
+
+\chapter{The Genesis of Fourier Analysis}
+\section{The vibrating string}
+\subsection{简介}
+The problem consists of the study of the motion of a string fixed at its end points and allowed to vibrate freely. We have in mind physical systems such as the strings of a musical instrument. As we mentioned above, we begin with a brief description of several observable physical phenomena on which our study is based. These are:
+
+- simple harmonic motion,
+
+- standing and traveling waves,
+
+- harmonics and superposition of tones.
+
+Understanding the empirical facts behind these phenomena will motivate our mathematical approach to vibrating strings.
+\subsubsection{Simple harmonic motion}
+Simple harmonic motion describes the behavior of the most basic oscillatory system (called the simple harmonic oscillator), and is therefore a natural place to start the study of vibrations. Consider a mass $\{m\}$ attached to a horizontal spring, which itself is attached to a fixed wall, and assume that the system lies on a frictionless surface.
+
+Choose an axis whose origin coincides with the center of the mass when it is at rest (that is, the spring is neither stretched nor compressed), as shown in $\reffig{p1}$.
+\begin{figure}[H]\centering\includegraphics[width=1\textwidth]{image//The Genesis of Fourier Analysis//1}
+\caption{Simple harmonic oscillator}
+\label{p1}	
+\end{figure}
+ When the mass is displaced from its initial equilibrium position and then released, it will undergo simple harmonic motion. This motion can be described mathematically once we have found the differential equation that governs the movement of the mass.
+ 
+ Let $y(t)$ denote the displacement of the mass at time $t .$ We assume that the spring is ideal, in the sense that it satisfies Hooke's law: the restoring force $F$ exerted by the spring on the mass is given by $F=-k y(t)$. Here $k>0$ is a given physical quantity called the spring constant. Applying Newton's law (force $=$ mass $\times$ acceleration), we obtain
+ $$
+ -k y(t)=m y^{\prime \prime}(t)
+ $$
+ where we use the notation $y^{\prime \prime}$ to denote the second derivative of $y$ with respect to $t .$ With $c=\sqrt{k / m},$ this second order ordinary differential equation becomes
+\begin{equation}
+ y^{\prime \prime}(t)+c^{2} y(t)=0\label{6}
+\end{equation}
+
+ The general solution of equation $\ref{6}$ is given by
+ $$
+ y(t)=a \cos c t+b \sin c t
+ $$
+ where $a$ and $b$ are constants. Clearly, all functions of this form solve equation $\ref{6}$, and these are the only (twice differentiable) solutions of that differential equation.
+ 
+ In the above expression for $y(t),$ the quantity $c$ is given, but $a$ and $b$ can be any real numbers. In order to determine the particular solution of the equation, we must impose two initial conditions in view of the two unknown constants $a$ and $b$. For example, if we are given $y(0)$ and $y^{\prime}(0),$ the initial position and velocity of the mass, then the solution of the physical problem is unique and given by
+$$
+y(t)=y(0) \cos c t+\frac{y^{\prime}(0)}{c} \sin c t
+$$
+One can easily verify that there exist constants $A>0$ and $\varphi \in \mathbb{R}$ such that
+$$
+a \cos c t+b \sin c t=A \cos (c t-\varphi)
+$$
+One calls $A=\sqrt{a^{2}+b^{2}}$ the "amplitude" of the motion, $c$ its "natural frequency," $\varphi$ its "phase" (uniquely determined up to an integer multiple of $2 \pi$ ), and $2 \pi / c$ the "period" of the motion.
+
+The typical graph of the function $A \cos (c t-\varphi),$ illustrated in $\reffig{p2},$ exhibits a wavelike pattern that is obtained from translating and stretching (or shrinking) the usual graph of $\cos t$.
+\begin{figure}[H]\centering\includegraphics[width=0.6\textwidth]{image//The Genesis of Fourier Analysis//2}
+	\caption{The graph of $A \cos (c t-\varphi)$}
+	\label{p2}	
+\end{figure}
+We make two observations regarding our examination of simple harmonic motion. The first is that the mathematical description of the most elementary oscillatory system, namely simple harmonic motion, involves the most basic trigonometric functions $\cos t$ and $\sin t .$ It will be important in what follows to recall the connection between these functions and complex numbers, as given in Euler's identity $e^{i t}=\cos t+i \sin t$. The second observation is that simple harmonic motion is determined as a function of time by two initial conditions, one determining the position, and the other the velocity (specified, for example, at time $t=0$ ). This property is shared by more general oscillatory systems, as we shall see below.
+
+\subsubsection{Standing and traveling waves}
+As it turns out, the vibrating string can be viewed in terms of one-dimensional wave motions. Here we want to describe two kinds of motions that lend themselves to simple graphic representations.
+
+- First, we consider standing waves. These are wavelike motions described by the graphs $y=u(x, t)$ developing in time $t$ as shown in $\reffig{p3}$.
+\begin{figure}[H]\centering\includegraphics[width=0.6\textwidth]{image//The Genesis of Fourier Analysis//3}
+	\caption{A standing wave at different moments in time: $t=0$ and $t=t_{0}$}
+	\label{p3}	
+\end{figure}
+
+In other words, there is an initial profile $y=\varphi(x)$ representing the wave at time $t=0,$ and an amplifying factor $\psi(t),$ depending on $t$ so that $y=u(x, t)$ with
+$$
+u(x, t)=\varphi(x) \psi(t)
+$$
+The nature of standing waves suggests the mathematical idea of "separation of variables," to which we will return later.
+
+- A second type of wave motion that is often observed in nature is that of a traveling wave. Its description is particularly simple:
+
+there is an initial profile $F(x)$ so that $u(x, t)$ equals $F(x)$ when $t=0 .$ As $t$ evolves, this profile is displaced to the right by $c t$ units, where $c$ is a positive constant, namely
+$$
+u(x, t)=F(x-c t)
+$$
+Graphically, the situation is depicted in $\reffig{p4}$
+\begin{figure}[H]\centering\includegraphics[width=0.6\textwidth]{image//The Genesis of Fourier Analysis//4}
+	\caption{A traveling wave at two different moments in time: $t=0$ and $t=t_{0}$}
+	\label{p4}	
+\end{figure}
+Since the movement in $t$ is at the rate $c,$ that constant represents the velocity of the wave. The function $F(x-c t)$ is a one-dimensional traveling wave moving to the right. Similarly, $u(x, t)=F(x+c t)$ is a one-dimensional traveling wave moving to the left.
+\subsubsection{Harmonics and superposition of tones}
+The final physical observation we want to mention (without going into any details now) is one that musicians have been aware of since time immemorial. It is the existence of harmonics, or overtones. The pure tones are accompanied by combinations of overtones which are primarily responsible for the timbre (or tone color) of the instrument. The idea of combination or superposition of tones is implemented mathematically by the basic concept of linearity, as we shall see below.
+\vspace{12pt}
+
+We now turn our attention to our main problem, that of describing the motion of a vibrating string. First, we derive the wave equation, that is, the partial differential equation that governs the motion of the string.
+
+\subsection{ Derivation of the wave equation}
+Imagine a homogeneous string placed in the $(x, y)$-plane, and stretched along the $x$-axis between $x=0$ and $x=L .$ If it is set to vibrate, its displacement $y=u(x, t)$ is then a function of $x$ and $t,$ and the goal is to derive the differential equation which governs this function.
+
+For this purpose, we consider the string as being subdivided into a large number $N$ of masses (which we think of as individual particles) distributed uniformly along the $x$-axis, so that the $n^{\text {th }}$ particle has its $x$-coordinate at $x_{n}=n L / N .$ We shall therefore conceive of the vibrating string as a complex system of $N$ particles, each oscillating in the vertical direction only; however, unlike the simple harmonic oscillator we considered previously, each particle will have its oscillation linked to its immediate neighbor by the tension of the string.
+\begin{figure}[H]\centering\includegraphics[width=0.6\textwidth]{image//The Genesis of Fourier Analysis//5}
+	\caption{A vibrating string as a discrete system of masses}
+	\label{p5}	
+\end{figure}
+We then set $y_{n}(t)=u\left(x_{n}, t\right),$ and note that $x_{n+1}-x_{n}=h,$ with $h=$ $L / N .$ If we assume that the string has constant density $\rho>0,$ it is reasonable to assign mass equal to $\rho h$ to each particle. By Newton's law, $\rho h y_{n}^{\prime \prime}(t)$ equals the force acting on the $n^{\text {th }}$ particle. We now make the simple assumption that this force is due to the effect of the two nearby particles, the ones with $x$-coordinates at $x_{n-1}$ and $x_{n+1}$ (see $\reffig{p5}$). We further assume that the force (or tension) coming from the right of the $n^{\text {th }}$ particle is proportional to $\left(y_{n+1}-y_{n}\right) / h,$ where $h$ is the distance between $x_{n+1}$ and $x_{n}$; hence we can write the tension as
+$$
+\left(\frac{\tau}{h}\right)\left(y_{n+1}-y_{n}\right)
+$$
+where $\tau>0$ is a constant equal to the coefficient of tension of the string. There is a similar force coming from the left, and it is
+$$
+\left(\frac{\tau}{h}\right)\left(y_{n-1}-y_{n}\right)
+$$
+Altogether, adding these forces gives us the desired relation between the oscillators $y_{n}(t),$ namely
+\begin{equation}
+\rho h y_{n}^{\prime \prime}(t)=\frac{\tau}{h}\left\{y_{n+1}(t)+y_{n-1}(t)-2 y_{n}(t)\right\}\label{7}
+\end{equation}
+On the one hand, with the notation chosen above, we see that
+$$
+y_{n+1}(t)+y_{n-1}(t)-2 y_{n}(t)=u\left(x_{n}+h, t\right)+u\left(x_{n}-h, t\right)-2 u\left(x_{n}, t\right)
+$$
+On the other hand, for any reasonable function $F(x)$ (that is, one that has continuous second derivatives) we have(泰勒展开)
+$$
+\frac{F(x+h)+F(x-h)-2 F(x)}{h^{2}} \rightarrow F^{\prime \prime}(x) \quad \text { as } h \rightarrow 0
+$$
+Thus we may conclude, after dividing by $h$ in $\ref{7}$ and letting $h$ tend to zero (that is, $N$ goes to infinity), that
+$$
+\rho \frac{\partial^{2} u}{\partial t^{2}}=\tau \frac{\partial^{2} u}{\partial x^{2}}
+$$
+Or
+$$
+\frac{1}{c^{2}} \frac{\partial^{2} u}{\partial t^{2}}=\frac{\partial^{2} u}{\partial x^{2}}, \quad \text { with } c=\sqrt{\tau / \rho}
+$$
+This relation is known as the {\bf one-dimensional wave equation}, or more simply as the wave equation. For reasons that will be apparent later, the coefficient $c>0$ is called the {\bf velocity} of the motion.
+
+In connection with this partial differential equation, we make an important simplifying mathematical remark. This has to do with scaling, or in the language of physics, a "change of units." That is, we can think of the coordinate $x$ as $x=a X$ where $a$ is an appropriate positive constant. Now, in terms of the new coordinate $X,$ the interval $0 \leq x \leq L$ becomes $0 \leq X \leq L / a .$ Similarly, we can replace the time coordinate $t$ by $t=b T$ where $b$ is another positive constant. If we set $U(X, T)=u(x, t),$ then
+$$
+\frac{\partial U}{\partial X}=a \frac{\partial u}{\partial x}, \quad \frac{\partial^{2} U}{\partial X^{2}}=a^{2} \frac{\partial^{2} u}{\partial x^{2}}
+$$
+and similarly for the derivatives in $t .$ So if we choose $a$ and $b$ appropriately, we can transform the one-dimensional wave equation into
+$$
+\frac{\partial^{2} U}{\partial T^{2}}=\frac{\partial^{2} U}{\partial X^{2}}
+$$
+which has the effect of setting the velocity $c$ equal to $1 .$ Moreover, we have the freedom to transform the interval $0 \leq x \leq L$ to $0 \leq X \leq \pi .$ (We shall see that the choice of $\pi$ is convenient in many circumstances.) All this is accomplished by taking $a=L / \pi$ and $b=L /(c \pi) .$ Once we solve the new equation, we can of course return to the original equation by making the inverse change of variables. Hence, we do not sacrifice generality by thinking of the wave equation as given on the interval $[0, \pi]$ with velocity $c=1.$
+
+\subsection{Solution to the wave equation}
+Having derived the equation for the vibrating string, we now explain two methods to solve it:
+
+- using traveling waves,
+
+- using the superposition of standing waves.
+
+While the first approach is very simple and elegant, it does not directly give full insight into the problem; the second method accomplishes that, and moreover is of wide applicability. It was first believed that the second method applied only in the simple cases where the initial position and velocity of the string were themselves given as a superposition of standing waves. However, as a consequence of Fourier's ideas, it became clear that the problem could be worked either way for all initial conditions.
+
+\subsubsection{Traveling waves}
+To simplify matters as before, we assume that $c=1$ and $L=\pi,$ so that the equation we wish to solve becomes
+$$
+\frac{\partial^{2} u}{\partial t^{2}}=\frac{\partial^{2} u}{\partial x^{2}} \quad \text { on } 0 \leq x \leq \pi
+$$
+The crucial observation is the following: if $F$ is any twice differentiable function, then $u(x, t)=F(x+t)$ and $u(x, t)=F(x-t)$ solve the wave equation.Note that the graph of $u(x, t)=F(x-t)$ at time $t=0$ is simply the graph of $F,$ and that at time $t=1$ it becomes the graph of $F$ translated to the right by
+1. Therefore, we recognize that $F(x-t)$ is a traveling wave which travels to the right with speed 1. Similarly, $u(x, t)=F(x+t)$ is a wave traveling to the left with speed $1 .$ These motions are depicted in $\reffig{p6}$.
+\begin{figure}[H]\centering\includegraphics[width=0.6\textwidth]{image//The Genesis of Fourier Analysis//6}
+	\caption{Waves traveling in both directions}
+	\label{p6}	
+\end{figure}
+
+Our discussion of tones and their combinations leads us to observe that the wave equation is {\bf linear}. This means that if $u(x, t)$ and $v(x, t)$ are particular solutions, then so is $\alpha u(x, t)+\beta v(x, t),$ where $\alpha$ and $\beta$ are any constants. Therefore, we may superpose two waves traveling in opposite directions to find that whenever $F$ and $G$ are twice differentiable functions, then
+$$
+u(x, t)=F(x+t)+G(x-t)
+$$
+is a solution of the wave equation. In fact, we now show that all solutions take this form.
+
+We drop for the moment the assumption that $0 \leq x \leq \pi,$ and suppose that $u$ is a twice differentiable function which solves the wave equation
+for all real $x$ and $t$.(给出真正的通解) Consider the following new set of variables $\xi=x+t$, $\eta=x-t,$ and define $v(\xi, \eta)=u(x, t) .$ The change of variables formula shows that $v$ satisfies
+$$
+\frac{\partial^{2} v}{\partial \xi \partial \eta}=0
+$$
+Integrating this relation twice gives $v(\xi, \eta)=F(\xi)+G(\eta),$ which then implies
+$$
+u(x, t)=F(x+t)+G(x-t)
+$$
+for some functions $F$ and $G$.
+We must now connect this result with our original problem, that is, the physical motion of a string. There, we imposed the restrictions $0 \leq$ $x \leq \pi,$ the initial shape of the string $u(x, 0)=f(x),$ and also the fact that the string has fixed end points, namely $u(0, t)=u(\pi, t)=0$ for all
+t. To use the simple observation above, we first extend $f$ to all of $\mathbb{R}$ by making it odd on $[-\pi, \pi],$ and then periodic in $x$ of period $2 \pi,$ and similarly for $u(x, t),$ the solution of our problem. Then the extension $u$ solves the wave equation on all of $\mathbb{R},$ and $u(x, 0)=f(x)$ for all $x \in \mathbb{R}$. Therefore, $u(x, t)=F(x+t)+G(x-t),$ and setting $t=0$ we find that
+$$
+F(x)+G(x)=f(x)
+$$
+Since many choices of $F$ and $G$ will satisfy this identity, this suggests imposing another initial condition on $u$ (similar to the two initial conditions in the case of simple harmonic motion), namely the initial velocity of the string which we denote by $g(x)$ :
+$$
+\frac{\partial u}{\partial t}(x, 0)=g(x)
+$$
+where of course $g(0)=g(\pi)=0 .$ Again, we extend $g$ to $\mathbb{R}$ first by making it odd over $[-\pi, \pi],$ and then periodic of period $2 \pi .$ The two initial conditions of position and velocity now translate into the following system:
+$$
+\left\{\begin{array}{l}
+F(x)+G(x)=f(x) \\
+F^{\prime}(x)-G^{\prime}(x)=g(x)
+\end{array}\right.
+$$
+Differentiating the first equation and adding it to the second, we obtain
+$$
+2 F^{\prime}(x)=f^{\prime}(x)+g(x)
+$$
+Similarly
+$$
+2 G^{\prime}(x)=f^{\prime}(x)-g(x)
+$$
+and hence there are constants $C_{1}$ and $C_{2}$ so that
+$$
+F(x)=\frac{1}{2}\left[f(x)+\int_{0}^{x} g(y) d y\right]+C_{1}
+$$
+and
+$$
+G(x)=\frac{1}{2}\left[f(x)-\int_{0}^{x} g(y) d y\right]+C_{2}
+$$
+Since $F(x)+G(x)=f(x)$ we conclude that $C_{1}+C_{2}=0,$ and therefore, our final solution of the wave equation with the given initial conditions takes the form $$
+u(x, t)=\frac{1}{2}[f(x+t)+f(x-t)]+\frac{1}{2} \int_{x-t}^{x+t} g(y) d y
+$$
+The form of this solution is known as {\bf d'Alembert's formula}. Observe that the extensions we chose for $f$ and $g$ guarantee that the string always has fixed ends, that is, $u(0, t)=u(\pi, t)=0$ for all $t$.
+(之所以要延拓是为了不再纠结于定义域的问题，从而使最后的代换(f和g的自变量由$x$换成$x+t$或$x-t$)能够严谨顺利地完成，而明确地给出延拓的定义，则是为了保证物理意义：两端的固定点.)
+
+A final remark is in order. The passage from $t \geq 0$ to $t \in \mathbb{R},$ and then back to $t \geq 0$, which was made above, exhibits the time reversal property of the wave equation.(在上面的变化的确没有提到如何从 $t \geq 0$ to $t \in \mathbb{R}$，而最后给出的是$t \geq 0$的情况，则应该要给出$t<0$的定义延拓，这个延拓要保证不会出现新的波动形式) In other words, a solution $u$ to the wave equation for $t \geq 0,$ leads to a solution $u^{-}$ defined for negative time $t<0$ simply by setting $u^{-}(x, t)=u(x,-t),$ a fact which follows from the invariance of the wave equation under the transformation $t \mapsto-t .$ The situation is quite different in the case of the heat equation.
+
+
+\subsubsection{Superposition of standing waves}
+We turn to the second method of solving the wave equation, which is based on two fundamental conclusions from our previous physical observations. By our considerations of standing waves, we are led to look for special solutions to the wave equation which are of the form $\varphi(x) \psi(t)$. This procedure, which works equally well in other contexts (in the case of the heat equation, for instance), is called {\bf separation of variables} and constructs solutions that are called pure tones. Then by the linearity of the wave equation, we can expect to combine these pure tones into a more complex combination of sound. Pushing this idea further, we can hope ultimately to express the general solution of the wave equation in terms of sums of these particular solutions.
+
+Note that one side of the wave equation involves only differentiation in $x,$ while the other, only differentiation in $t .$ This observation provides another reason to look for solutions of the equation in the form $u(x, t)=\varphi(x) \psi(t)$ (that is, to "separate variables"), the hope being to reduce a difficult partial differential equation into a system of simpler ordinary differential equations. In the case of the wave equation, with $u$ of the above form, we get
+$$
+\varphi(x) \psi^{\prime \prime}(t)=\varphi^{\prime \prime}(x) \psi(t)
+$$
+and therefore
+$$
+\frac{\psi^{\prime \prime}(t)}{\psi(t)}=\frac{\varphi^{\prime \prime}(x)}{\varphi(x)}
+$$
+The key observation here is that the left-hand side depends only on $t$, and the right-hand side only on $x$. This can happen only if both sides are equal to a constant, say $\lambda$. Therefore, the wave equation reduces to the following
+\begin{equation}
+\left\{\begin{array}{l}
+\psi^{\prime \prime}(t)-\lambda \psi(t)=0 \\
+\varphi^{\prime \prime}(x)-\lambda \varphi(x)=0
+\end{array}\right.\label{8}
+\end{equation}
+We focus our attention on the first equation in the above system. At this point, we will recognize the equation we obtained in the study of simple harmonic motion. Note that we need to consider only the case when $\lambda<0$, since when $\lambda \geq 0$ the solution $\psi$ will not oscillate as time varies. Therefore, we may write $\lambda=-m^{2},$ and the solution of the equation is then given by
+$$
+\psi(t)=A \cos m t+B \sin m t
+$$
+Similarly, we find that the solution of the second equation in $\ref{8}$ is
+$$
+\varphi(x)=\tilde{A} \cos m x+\tilde{B} \sin m x
+$$
+Now we take into account that the string is attached at $x=0$ and $x=\pi$. This translates into $\varphi(0)=\varphi(\pi)=0,$ which in turn gives $\tilde{A}=0,$ and if $\tilde{B} \neq 0,$ then $m$ must be an integer. If $m=0,$ the solution vanishes identically, and if $m \leq-1$, we may rename the constants and reduce to the case $m \geq 1$ since the function $\sin y$ is odd and $\cos y$ is even. Finally, we arrive at the guess that for each $m \geq 1,$ the function
+$$
+u_{m}(x, t)=\left(A_{m} \cos m t+B_{m} \sin m t\right) \sin m x
+$$
+which we recognize as a standing wave, is a solution to the wave equation. Note that in the above argument we divided by $\varphi$ and $\psi$, which sometimes vanish, so one must actually check by hand that the standing wave $u_{m}$ solves the equation.
+
+Before proceeding further with the analysis of the wave equation, we pause to discuss standing waves in more detail. The terminology comes from looking at the graph of $u_{m}(x, t)$ for each fixed $t .$ Suppose first that $m=1,$ and take $u(x, t)=\cos t \sin x .$ Then, $\reffig{p7}(a)$ gives the graph of $u$ for different values of $t$.
+\begin{figure}[H]\centering\includegraphics[width=1\textwidth]{image//The Genesis of Fourier Analysis//7}
+	\caption{Fundamental tone (a) and overtones (b) at different moments in time}
+	\label{p7}	
+\end{figure}
+The case $m=1$ corresponds to the {\bf fundamental tone} or {\bf first harmonic} of the vibrating string.
+
+We now take $m=2$ and look at $u(x, t)=\cos 2 t \sin 2 x .$ This corresponds to {\bf the first overtone} or {\bf second harmonic}, and this motion is described in $\reffig{p7}(b)$. Note that $u(\pi / 2, t)=0$ for all $t$. Such points, which remain motionless in time, are called nodes, while points whose motion has maximum amplitude are named anti-nodes.
+
+For higher values of $m$ we get more overtones or higher harmonics. Note that as $m$ increases, the frequency increases, and the period $2 \pi / m$ decreases. Therefore, the fundamental tone has a lower frequency than the overtones.
+
+We now return to the original problem. Recall that the wave equation is linear in the sense that if $u$ and $v$ solve the equation, so does $\alpha u+\beta v$ for any constants $\alpha$ and $\beta$. This allows us to construct more solutions by taking linear combinations of the standing waves $u_{m} .$ This technique, called superposition, leads to our final guess for a solution of the wave equation
+\begin{equation}
+u(x, t)=\sum_{m=1}^{\infty}\left(A_{m} \cos m t+B_{m} \sin m t\right) \sin m x
+\end{equation}
+Note that the above sum is infinite, so that questions of convergence arise, but since most of our arguments so far are formal, we will not worry about this point now.
+
+Suppose the above expression gave all the solutions to the wave equation. If we then require that the initial position of the string at time $t=0$ is given by the shape of the graph of the function $f$ on $[0, \pi],$ with of course $f(0)=f(\pi)=0,$ we would have $u(x, 0)=f(x),$ hence
+$$
+\sum_{m=1}^{\infty} A_{m} \sin m x=f(x).$$
+Since the initial shape of the string can be any reasonable function $f,$ we must ask the following basic question:
+Given a function $f$ on $[0, \pi]$ (with $f(0)=f(\pi)=0$ ), can we find coefficients $A_{m}$ so that
+\begin{equation}
+f(x)=\sum_{m=1}^{\infty} A_{m} \sin m x ?\label{9}
+\end{equation}
+This question is stated loosely, but a lot of our effort will be to formulate the question precisely and attempt to answer it. This was the basic problem that initiated the study of Fourier analysis.
+
+A simple observation allows us to guess a formula giving $A_{m}$ if the expansion $\ref{9}$ were to hold. Indeed, we multiply both sides by $\sin n x$ and integrate between $[0, \pi]$; working formally, we obtain
+$$
+\begin{aligned}
+\int_{0}^{\pi} f(x) \sin n x d x &=\int_{0}^{\pi}\left(\sum_{m=1}^{\infty} A_{m} \sin m x\right) \sin n x d x \\
+&=\sum_{m=1}^{\infty} A_{m} \int_{0}^{\pi} \sin m x \sin n x d x=A_{n} \cdot \frac{\pi}{2}
+\end{aligned}
+$$
+where we have used the fact that
+$$
+\int_{0}^{\pi} \sin m x \sin n x d x=\left\{\begin{array}{ll}
+0 & \text { if } m \neq n \\
+\pi / 2 & \text { if } m=n
+\end{array}\right.
+$$
+(用$\cos(m+n)$和$\cos(m-n)$改写式子)
+
+Therefore, the guess for $A_{n},$ called the $n^{\text {th }}$ Fourier sine coefficient of $f$, is
+\begin{equation}
+A_{n}=\frac{2}{\pi} \int_{0}^{\pi} f(x) \sin n x d x
+\end{equation}
+We shall return to this formula. and other similar ones, later.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 \end{document}
